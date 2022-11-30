@@ -3,6 +3,7 @@ package controller;
 
 
 import GamePlay.Play;
+import example.MusicPlayer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
@@ -31,9 +32,11 @@ import java.io.IOException;
     void startGame(ActionEvent event) {
         System.out.println("Game Started");
         new Play().loadFrame();
-        System.exit(0);
-
+        MusicPlayer.getMusicPlay("src/main/resources/frogger.mp3");
         scene01.getChildren().removeAll();
+
+
+
 
 
 
