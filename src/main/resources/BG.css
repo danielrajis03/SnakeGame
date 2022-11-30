@@ -1,6 +1,6 @@
 #stack-pane{
-    -fx-background-image: url("MainMenu.jpg");
+    -fx-background-image: url("Main-Menu.jpg");
     -fx-background-repeat: no-repeat;
     -fx-background-size: 500 500;
-    -fx background-position: center center;
+    -fx-background-position: center center;
 }

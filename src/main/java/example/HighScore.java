@@ -1,2 +1,4 @@
-package example;public class HighScore {
+package example;
+
+public class HighScore {
 }

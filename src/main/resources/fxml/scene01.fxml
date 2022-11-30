@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="scene01" accessibleRole="BUTTON" maxWidth="-Infinity" maxHeight="-Infinity" minHeight="-Infinity" minWidth="Infinity"  prefHeight="400.0" prefWidth="600.0" styleClass="Wallpaper" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Scene01controller">
+   <children>
+      <Button fx:id="startBtn" layoutX="227.0" layoutY="141.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" onAction="#startGame" text="Start Game" />
+      <Button fx:id= "btnExit" layoutX="266.0" layoutY="295.0" mnemonicParsing="false" onAction="#exitGame" text="Exit" />
+   </children>
+</AnchorPane>

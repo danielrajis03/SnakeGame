@@ -1,0 +1,4 @@
+.Wallpaper{
+    -fx-background-Image:url("Wallpaper.jpg");
+    -fx-background-size: 100% 100%;
+}

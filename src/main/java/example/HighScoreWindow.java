@@ -1,2 +1,5 @@
-package example;public class HighScoreWindow {
+package example;
+
+public class HighScoreWindow
+{
 }

@@ -1,4 +1,9 @@
-package example;
+package GamePlay;
+
+import example.Food;
+import example.ImageUtil;
+import example.MusicPlayer;
+import example.MyFrame;
 
 import java.awt.Color;
 import java.awt.Font;
