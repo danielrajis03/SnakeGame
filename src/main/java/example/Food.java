@@ -29,7 +29,7 @@ public class Food extends MyFrame.SnakeObject
 		if (mySnake.getRectangle().intersects(this.getRectangle()) && l && mySnake.l)		{
 			this.l = false;
 			mySnake.changeLength(mySnake.getLength() + 1);
-			mySnake.score += 521;
+			mySnake.score += 10;
 		}
 	}
 	@Override
