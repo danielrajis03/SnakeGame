@@ -2,10 +2,23 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="scene01" accessibleRole="BUTTON" prefHeight="400.0" prefWidth="600.0" styleClass="wallpaper" stylesheets="@../style/style.css"  xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Scene01controller">
+<AnchorPane fx:id="scene01" accessibleRole="BUTTON" prefHeight="400.0" prefWidth="600.0" styleClass="wallpaper" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Scene01controller">
    <children>
-      <Button fx:id="startBtn" layoutX="227.0" layoutY="141.0" mnemonicParsing="false" onAction="#startGame" prefHeight="25.0" prefWidth="113.0" text="Start Game" />
-      <Button fx:id="btnExit" layoutX="266.0" layoutY="295.0" mnemonicParsing="false" onAction="#exitGame" text="Exit" />
+      <Button fx:id="startBtn" layoutX="227.0" layoutY="141.0" mnemonicParsing="false" onAction="#startGame" prefHeight="39.0" prefWidth="128.0" text="Start Game">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button fx:id="btnExit" layoutX="258.0" layoutY="295.0" mnemonicParsing="false" onAction="#exitGame" prefHeight="29.0" prefWidth="66.0" text="Exit">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font></Button>
+      <Label layoutX="203.0" layoutY="14.0" prefHeight="17.0" prefWidth="176.0" text="Enter Your Name :">
+         <font>
+            <Font name="Calibri Light Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="189.0" layoutY="36.0" prefHeight="50.0" prefWidth="205.0" />
    </children>
 </AnchorPane>
