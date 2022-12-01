@@ -33,8 +33,8 @@ public class Scene01controller {
         System.exit(0);
     }
 
-    @FXML
-    void initialize() {
-        txtName.setText(Data.text);
-    }
+  //  @FXML
+   // void initialize() {
+      //  txtName.setText(Data.text);
+    //}
 }

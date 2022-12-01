@@ -13,8 +13,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 public class Scene02controller {
-    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/scene02.fxml"));
-    Scene scene = new Scene(fxmlLoader.load());
+
     @FXML
     private AnchorPane scene02;
 

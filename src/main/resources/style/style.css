@@ -2,3 +2,7 @@
     -fx-background-Image:url("wallpaper.jpg");
     -fx-background-size: 100% 100%;
 }
+.backNight{
+ -fx-background-Image:url("backNight.png");
+    -fx-background-size: 100% 100%;
+}
