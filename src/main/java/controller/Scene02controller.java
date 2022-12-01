@@ -3,6 +3,7 @@ package controller;
 import GamePlay.Play;
 import example.Main;
 import com.example.snake.model.Data;
+import example.MusicPlayer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +13,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
-public class Scene02controller {
+public class Scene02controller   {
 
     @FXML
     private AnchorPane scene02;
@@ -23,28 +24,31 @@ public class Scene02controller {
     @FXML
     private TextArea txaWelcome;
 
-    public Scene02controller() throws IOException {
-    }
-
     @FXML
-    void sayBye(ActionEvent event) throws IOException {
+    void sayBye(ActionEvent event)throws IOException {
         AnchorPane scene01 = FXMLLoader.load(Main.class.getClass().getResource("fxml/scene01.fxml"));
         scene02.getChildren().removeAll();
         scene02.getChildren().setAll(scene01);
     }
 
     @FXML
-    void startGame(ActionEvent event) {
+    void startGame(ActionEvent event) throws IOException {
+        scene02.getChildren().removeAll();
         System.out.println("Game Started");
         new Play().loadFrame();
+        MusicPlayer.getMusicPlay("src/main/resources/frogger.mp3");
         System.exit(0);
 
-        scene01.getChildren().removeAll();
+
     }
+
     @FXML
     void initialize() {
-        txaWelcome.setText("Welcome "+Data.text);
+        txaWelcome.setText("Welcome " + Data.text);
     }
 }
+
+
+
 
 
