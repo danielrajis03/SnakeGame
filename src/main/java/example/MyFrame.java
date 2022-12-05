@@ -11,6 +11,8 @@ import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import static GamePlay.Play.CheckScore;
+
 
 /**
  * 
@@ -226,7 +228,9 @@ public class MyFrame extends JPanel implements KeyListener
 		@Override
 		public void draw(Graphics g)
 		{
+
 			outofBounds();
+			CheckScore();
 			eatBody();
 
 			bodyPoints.add(new Point(x, y));

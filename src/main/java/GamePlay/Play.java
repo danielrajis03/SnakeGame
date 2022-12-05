@@ -49,9 +49,10 @@ public class Play extends MyFrame
 		if(highScore.equals("")){
 			highScore = this.GetHighScore();
 		}
-		//if (playerName == null){
-		//	playerName = "Guest" + noRand;
-		//}
+		if (playerName == null){
+			playerName = "Guest" ;
+		}
+		//playerName = name.getText;
 		g.drawImage(background, 0, 0, null);
 
 		// Ákveða stöðu leiksins.
@@ -83,7 +84,7 @@ public class Play extends MyFrame
 
 
 
-	public void CheckScore(){
+	public static void CheckScore(){
 		//format Daniel/:/100
 		if (mySnake.score > Integer.parseInt((highScore.split(":")[1]))){
 			//user set new record
@@ -137,7 +138,7 @@ public class Play extends MyFrame
 		}
 		catch(Exception e)
 		{
-		return "0";
+		return "nobody:0";
 	}
 		finally{
 			try { if (reader != null)
