@@ -14,7 +14,7 @@ module example {
 
     exports controller;
     opens fxml;
-
+    //opens food;
     exports com.example.snake.model;
     opens com.example.snake.model to javafx.fxml;
 }
