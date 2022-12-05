@@ -10,7 +10,8 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.KeyEvent;
-
+import java.io.FileReader;
+import java.io.*;
 /**
  * 
  * @Project Snake
@@ -29,6 +30,7 @@ public class Play extends MyFrame
 
 	public Image background = ImageUtil.images.get("UI-background");
 	public Image fail = ImageUtil.images.get("game-scene-01");
+	public String highScore = "";
 
 	@Override
 	public void keyPressed(KeyEvent e)
@@ -41,6 +43,9 @@ public class Play extends MyFrame
 	public void paint(Graphics g)
 	{
 		super.paint(g);
+		if(highScore.equals("")){
+			highScore = this.GetHighScore();
+		}
 		g.drawImage(background, 0, 0, null);
 
 		// Ákveða stöðu leiksins.
@@ -75,6 +80,32 @@ public class Play extends MyFrame
 		MusicPlayer.getMusicPlay("src/main/resources/frogger.mp3");
 
 	}
+	public String GetHighScore()
+	{
+		//format:  Daniel:100
+		FileReader readFile = null;
+		BufferedReader reader = null;
+		try {
+			 readFile = new FileReader("highscore.dat");
+			 reader = new BufferedReader(readFile);
+			return reader.readLine();
+		}
+		catch(Exception e)
+		{
+		return "0";
+	}
+		finally{
+			try {
+				reader.close();
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+
+		}
+
+
+
 /*	
 	public static void main(String[] args)
 	{

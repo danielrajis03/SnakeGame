@@ -106,6 +106,8 @@ public class MyFrame extends JPanel implements KeyListener
 		private int num; // ?
 		public int score = 0;
 
+		//
+
 		private static final BufferedImage IMG_SNAKE_HEAD = (BufferedImage) ImageUtil.images.get("snake-head-right");
 
 		public static List<Point> bodyPoints = new LinkedList<>();
