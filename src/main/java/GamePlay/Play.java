@@ -85,6 +85,33 @@ public class Play extends MyFrame
 		if (mySnake.score > Integer.parseInt((highScore.split(":")[1]))){
 			//user set new record
 			highScore = playerName + ":" + mySnake.score;
+			File scoreFile = new File("highscore.dat");
+			if (!scoreFile.exists()){
+				try{
+					scoreFile.createNewFile();
+				}
+				catch (IOException e){
+					throw new RuntimeException(e);
+				}
+			}
+			BufferedWriter bWriter = null;
+			FileWriter writeFile = null ;
+			try {
+				writeFile = new FileWriter(scoreFile);
+				bWriter = new BufferedWriter(writeFile);
+				bWriter.write(this.highScore);
+			}
+			catch (Exception e){
+				throw new RuntimeException();
+			}
+			finally{
+				try{
+					if(bWriter!= null)
+						bWriter.close();
+				}
+				catch (Exception e){
+				}
+			}
 		}
 
 }
