@@ -72,6 +72,7 @@ public class Play extends MyFrame
 		g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 30));
 		g.setColor(Color.MAGENTA);
 		g.drawString("SCORE : " + mySnake.score, 20, 40);
+		g.drawString("HighScore : " + highScore, 20, 65);
 	}
 
 	public static void main(String[] args)
@@ -95,7 +96,7 @@ public class Play extends MyFrame
 		return "0";
 	}
 		finally{
-			try {
+			try { if (reader != null)
 				reader.close();
 			} catch (IOException e) {
 				throw new RuntimeException(e);
