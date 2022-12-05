@@ -6,11 +6,10 @@
 
 <AnchorPane fx:id="scene02" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="backNight" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Scene02controller">
     <children>
-        <Button fx:id="btnBye" layoutX="246.0" layoutY="238.0" mnemonicParsing="false" onAction="#sayBye" text="Back to Start" />
         <TextArea fx:id="txaWelcome" editable="false" layoutX="15.0" layoutY="14.0" prefHeight="59.0" prefWidth="571.0">
             <font>
                 <Font name="Bradley Hand ITC" size="24.0" />
             </font></TextArea>
-      <Button fx:id="startBtn" layoutX="233.0" layoutY="125.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="109.0" onAction="#startGame" text="Start Game"  />
+      <Button fx:id="startBtn" layoutX="233.0" layoutY="125.0" mnemonicParsing="false" onAction="#startgame" prefHeight="40.0" prefWidth="109.0" text="Start Game" />
     </children>
 </AnchorPane>

@@ -6,19 +6,20 @@
 
 <AnchorPane fx:id="scene01" accessibleRole="BUTTON" prefHeight="400.0" prefWidth="600.0" styleClass="wallpaper" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Scene01controller">
    <children>
-      <Button fx:id="btnNext" layoutX="228.0" layoutY="141.0" mnemonicParsing="false" onAction="#moveToNextScene" prefHeight="25.0" prefWidth="113.0" text="Next">
+      <Button fx:id="btnNext" layoutX="228.0" layoutY="141.0" mnemonicParsing="false" onAction="#startGame" prefHeight="25.0" prefWidth="113.0" text="Next" AnchorPane.topAnchor="99.0">
          <font>
             <Font name="Comic Sans MS Bold Italic" size="14.0" />
          </font></Button>
-      <Button fx:id="btnExit" layoutX="265.0" layoutY="296.0" mnemonicParsing="false" onAction="#exitGame" text="Exit">
+      <Button layoutX="265.0" layoutY="296.0" mnemonicParsing="false" onAction="#quitProgram" text="Exit">
          <font>
             <Font size="13.0" />
          </font></Button>
+      <TextField fx:id="txtName" layoutX="14.0" layoutY="35.0" />
       <Label layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="131.0" text="Enter Your Name:" textFill="#fff9f9">
          <font>
             <Font name="Comic Sans MS Bold Italic" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id = "txtName" layoutX="14.0" layoutY="35.0" />
    </children>
 </AnchorPane>
+

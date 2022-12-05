@@ -13,7 +13,7 @@ module example {
     opens com.example.snake to javafx.fxml;
 
     exports controller;
-
+    opens fxml;
 
     exports com.example.snake.model;
     opens com.example.snake.model to javafx.fxml;
