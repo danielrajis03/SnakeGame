@@ -12,6 +12,8 @@ import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.io.FileReader;
 import java.io.*;
+import static example.Main.playerName;
+
 /**
  * 
  * @Project Snake
@@ -31,6 +33,7 @@ public class Play extends MyFrame
 	public Image background = ImageUtil.images.get("UI-background");
 	public Image fail = ImageUtil.images.get("game-scene-01");
 	public String highScore = "";
+	private String txtName;
 
 	@Override
 	public void keyPressed(KeyEvent e)
@@ -72,9 +75,19 @@ public class Play extends MyFrame
 		g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 30));
 		g.setColor(Color.MAGENTA);
 		g.drawString("SCORE : " + mySnake.score, 20, 40);
-		g.drawString("HighScore : " + highScore, 20, 65);
+		g.drawString("HighScore : " + highScore, 20, 68);
 	}
 
+
+
+	public void CheckScore(){
+		//format Daniel/:/100
+		if (mySnake.score > Integer.parseInt((highScore.split(":")[1]))){
+			//user set new record
+			highScore = playerName + ":" + mySnake.score;
+		}
+
+}
 	public static void main(String[] args)
 	{
 		new Play().loadFrame();
