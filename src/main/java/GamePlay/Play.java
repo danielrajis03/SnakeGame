@@ -33,7 +33,7 @@ public class Play extends MyFrame
 	public Image background = ImageUtil.images.get("UI-background");
 	public Image fail = ImageUtil.images.get("game-scene-01");
 	public String highScore = "";
-	private String txtName;
+
 
 	@Override
 	public void keyPressed(KeyEvent e)
@@ -49,6 +49,9 @@ public class Play extends MyFrame
 		if(highScore.equals("")){
 			highScore = this.GetHighScore();
 		}
+		//if (playerName == null){
+		//	playerName = "Guest" + noRand;
+		//}
 		g.drawImage(background, 0, 0, null);
 
 		// Ákveða stöðu leiksins.
@@ -110,6 +113,7 @@ public class Play extends MyFrame
 						bWriter.close();
 				}
 				catch (Exception e){
+					//errors
 				}
 			}
 		}
