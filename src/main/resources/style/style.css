@@ -6,3 +6,7 @@
  -fx-background-Image:url("backNight.png");
     -fx-background-size: 100% 100%;
 }
+.SceneTwo{
+ -fx-background-Image:url("SceneTwo.png");
+    -fx-background-size: 100% 100%;
+}
