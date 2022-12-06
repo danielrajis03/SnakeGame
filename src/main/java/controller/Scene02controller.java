@@ -57,7 +57,7 @@ public class Scene02controller   {
 
     @FXML
     void Hard(ActionEvent event) {
-        speed = 10;
+        speed = 9;
     }
 
 

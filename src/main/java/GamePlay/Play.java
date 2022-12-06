@@ -76,7 +76,7 @@ public class Play extends MyFrame
 			}
 		} else
 		{
-			g.drawImage(fail, 140, 100, null);
+			g.drawImage(fail, 115, 100, null);
 		}
 		drawScore(g);
 	}
@@ -145,7 +145,7 @@ public class Play extends MyFrame
 		}
 		catch(Exception e)
 		{
-		return "nobody:0";
+		return "Nobody:0";
 	}
 		finally{
 			try { if (reader != null)
