@@ -12,10 +12,16 @@
                 <Font name="Bradley Hand ITC" size="24.0" />
             </font></TextArea>
       <Button fx:id="startBtn" layoutX="246.0" layoutY="308.0" mnemonicParsing="false" onAction="#startGame" prefHeight="40.0" prefWidth="109.0" text="Start Game" />
-      <Button layoutX="36.0" layoutY="107.0" mnemonicParsing="false" text="Easy">
+      <Button layoutX="109.0" layoutY="285.0" mnemonicParsing="false" text="Easy">
          <font>
             <Font name="Californian FB Italic" size="18.0" />
          </font>
+      </Button>
+      <Button layoutX="431.0" layoutY="285.0" mnemonicParsing="false" text="Hard">
+         <font>
+            <Font name="Californian FB Italic" size="18.0" />
+         </font></Button>
+      <Button fx:id="BG1" layoutX="26.0" layoutY="115.0" mnemonicParsing="false" onAction="#BG1" text="1">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -24,7 +30,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="320.0" layoutY="107.0" mnemonicParsing="false" text="Hard">
+      <Button fx:id="BG2" layoutX="328.0" layoutY="115.0" mnemonicParsing="false" onAction="#BG2" text="2">
          <graphic>
             <ImageView fitHeight="143.0" fitWidth="206.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -32,8 +38,6 @@
                </image>
             </ImageView>
          </graphic>
-         <font>
-            <Font name="Californian FB Italic" size="18.0" />
-         </font></Button>
+      </Button>
     </children>
 </AnchorPane>

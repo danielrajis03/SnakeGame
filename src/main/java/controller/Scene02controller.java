@@ -13,7 +13,10 @@ import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+
 public class Scene02controller   {
+    public static int SetbackGround;
+    public static int speed;
 
     @FXML
     private AnchorPane scene02;
@@ -37,6 +40,17 @@ public class Scene02controller   {
 
 
     }
+    @FXML
+    void BG1(ActionEvent event) {
+        SetbackGround =1;
+
+    }
+
+    @FXML
+    void BG2(ActionEvent event){
+        setbackGround = 2;}
+
+
    /* @FXML
     void sayBye(ActionEvent event)throws IOException {
         AnchorPane scene01 = FXMLLoader.load(Main.class.getClass().getResource("fxml/scene01.fxml"));
