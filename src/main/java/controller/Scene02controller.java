@@ -50,6 +50,16 @@ public class Scene02controller   {
     void BG2(ActionEvent event){
         SetbackGround = 2;}
 
+    @FXML
+    void Easy(ActionEvent event) {
+        speed = 5;
+    }
+
+    @FXML
+    void Hard(ActionEvent event) {
+        speed = 10;
+    }
+
 
    /* @FXML
     void sayBye(ActionEvent event)throws IOException {

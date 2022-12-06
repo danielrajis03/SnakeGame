@@ -12,7 +12,7 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import static GamePlay.Play.CheckScore;
-
+import static controller.Scene02controller.speed;
 
 
 /**
@@ -127,7 +127,7 @@ public class MyFrame extends JPanel implements KeyListener
 			this.w = i.getWidth(null);
 			this.h = i.getHeight(null);
 
-			this.speed_XY = 5;
+			this.speed_XY = speed;
 			this.length = 1;
 
 			/*

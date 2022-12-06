@@ -12,12 +12,12 @@
                 <Font name="Bradley Hand ITC" size="24.0" />
             </font></TextArea>
       <Button fx:id="startBtn" layoutX="246.0" layoutY="308.0" mnemonicParsing="false" onAction="#startGame" prefHeight="40.0" prefWidth="109.0" text="Start Game" />
-      <Button layoutX="109.0" layoutY="285.0" mnemonicParsing="false" text="Easy">
+      <Button fx:id="Easy" layoutX="109.0" layoutY="285.0" mnemonicParsing="false" onAction="#Easy" text="Easy">
          <font>
             <Font name="Californian FB Italic" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="431.0" layoutY="285.0" mnemonicParsing="false" text="Hard">
+      <Button fx:id="Hard" layoutX="431.0" layoutY="285.0" mnemonicParsing="false" onAction="#Hard" text="Hard">
          <font>
             <Font name="Californian FB Italic" size="18.0" />
          </font></Button>
