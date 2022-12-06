@@ -46,12 +46,12 @@ public class Play extends MyFrame
 	@Override
 	public void paint(Graphics g)
 	{
-		if(SetbackGround ==1){
+		/*if(SetbackGround ==1){
 			background = ImageUtil.images.get("backDay.png");
 		}
 		if (SetbackGround == 2){
 			background = ImageUtil.images.get("backNight.png");
-		}
+		}*/
 		super.paint(g);
 		if(highScore.equals("")){
 			highScore = this.GetHighScore();
@@ -76,7 +76,7 @@ public class Play extends MyFrame
 			}
 		} else
 		{
-			g.drawImage(fail, 0, 0, null);
+			g.drawImage(fail, 140, 100, null);
 		}
 		drawScore(g);
 	}

@@ -15,7 +15,7 @@ public class Food extends MyFrame.SnakeObject
 	public Food()	{
 		this.l = true;
 
-		this.i = ImageUtil.images.get(String.valueOf(new Random().nextInt(10)));
+		this.i = ImageUtil.images.get(String.valueOf(new Random().nextInt(16)));
 
 		this.w = i.getWidth(null);
 		this.h = i.getHeight(null);
