@@ -1,9 +1,11 @@
 package GamePlay;
 
+import com.example.snake.model.Data;
 import example.Food;
 import example.ImageUtil;
 import example.MusicPlayer;
 import example.MyFrame;
+import example.Obstacles;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -19,7 +21,7 @@ import static controller.Scene02controller.SetbackGround;
  * 
  * @Project Snake
  * @Description Spilaðu leikinn
- * @Author Sigurður Sigurðardóttir
+ * @Author Daniel Rajis
  * @version Ekki viss
  */ 
 
@@ -30,6 +32,7 @@ public class Play extends MyFrame
 
 	public static MySnake mySnake = new MySnake(100, 100);// x , y
 	public Food food = new Food();
+	public Obstacles obstacles = new Obstacles();
 
 	public Image background = ImageUtil.images.get("UI-background");
 	public Image fail = ImageUtil.images.get("game-scene-01");
@@ -57,7 +60,7 @@ public class Play extends MyFrame
 			highScore = this.GetHighScore();
 		}
 		if (playerName == null){
-			playerName = "Guest" ;
+			playerName = Data.text ;
 		}
 		//playerName = name.getText;
 		g.drawImage(background, 0, 0, null);
@@ -77,6 +80,11 @@ public class Play extends MyFrame
 		} else
 		{
 			g.drawImage(fail, 115, 100, null);
+		}
+		if (obstacles.l)
+		{
+			obstacles.draw(g);
+			obstacles.hit(mySnake);
 		}
 		drawScore(g);
 	}
