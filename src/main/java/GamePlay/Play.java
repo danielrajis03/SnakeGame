@@ -47,10 +47,10 @@ public class Play extends MyFrame
 	public void paint(Graphics g)
 	{
 		if(SetbackGround ==1){
-			background = ImageUtil.images.get("backDay");
+			background = ImageUtil.images.get("UI-background");
 		}
-		if (SetbackGround == 2){
-			background = ImageUtil.images.get("backNight");
+		if (SetbackGround ==2){
+			background = ImageUtil.images.get("UI-background2");
 		}
 		super.paint(g);
 		if(highScore.equals("")){
