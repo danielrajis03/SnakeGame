@@ -11,7 +11,8 @@ import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-//import static GamePlay.Play.CheckScore;
+import static GamePlay.Play.CheckScore;
+
 
 
 /**
@@ -254,6 +255,7 @@ public class MyFrame extends JPanel implements KeyListener
 					if (point.equals(point2) && point != point2)
 					{
 						this.l = false;
+						CheckScore();
 					}
 				}
 			}
@@ -277,6 +279,7 @@ public class MyFrame extends JPanel implements KeyListener
 			if (xOut || yOut)
 			{
 				l = false;
+				CheckScore();
 			}
 		}
 	}

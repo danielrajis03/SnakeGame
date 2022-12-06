@@ -28,12 +28,12 @@ public class Play extends MyFrame
 
 	private static final long serialVersionUID = -3641221053272056036L;
 
-	public MySnake mySnake = new MySnake(100, 100);// x , y
+	public static MySnake mySnake = new MySnake(100, 100);// x , y
 	public Food food = new Food();
 
 	public Image background = ImageUtil.images.get("UI-background");
 	public Image fail = ImageUtil.images.get("game-scene-01");
-	public String highScore = "";
+	public static String highScore = "";
 
 
 	@Override
@@ -46,12 +46,12 @@ public class Play extends MyFrame
 	@Override
 	public void paint(Graphics g)
 	{
-		/*if(SetbackGround ==1){
-			background = ImageUtil.images.get("backDay.png");
+		if(SetbackGround ==1){
+			background = ImageUtil.images.get("backDay");
 		}
 		if (SetbackGround == 2){
-			background = ImageUtil.images.get("backNight.png");
-		}*/
+			background = ImageUtil.images.get("backNight");
+		}
 		super.paint(g);
 		if(highScore.equals("")){
 			highScore = this.GetHighScore();
@@ -86,12 +86,12 @@ public class Play extends MyFrame
 		g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 30));
 		g.setColor(Color.MAGENTA);
 		g.drawString("SCORE : " + mySnake.score, 20, 40);
-		g.drawString("HighScore : " + highScore, 20, 68);
+		g.drawString("HIGH SCORE : " + highScore, 20, 68);
 	}
 
 
 
-	public void CheckScore(){
+	public static void CheckScore(){
 		//format Daniel/:/100
 		if (mySnake.score > Integer.parseInt((highScore.split(":")[1]))){
 			//user set new record
@@ -110,7 +110,7 @@ public class Play extends MyFrame
 			try {
 				writeFile = new FileWriter(scoreFile);
 				bWriter = new BufferedWriter(writeFile);
-				bWriter.write(this.highScore);
+				bWriter.write(highScore+"\n");
 			}
 			catch (Exception e){
 				throw new RuntimeException();
