@@ -11,22 +11,29 @@
             <font>
                 <Font name="Bradley Hand ITC" size="24.0" />
             </font></TextArea>
-      <Button fx:id="startBtn" layoutX="246.0" layoutY="308.0" mnemonicParsing="false" onAction="#startgame" prefHeight="40.0" prefWidth="109.0" text="Start Game" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="46.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../UI-background.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="143.0" fitWidth="206.0" layoutX="349.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../style/backNight.png" />
-         </image>
-      </ImageView>
-      <Button layoutX="120.0" layoutY="253.0" mnemonicParsing="false" text="Easy">
+      <Button fx:id="startBtn" layoutX="246.0" layoutY="308.0" mnemonicParsing="false" onAction="#startGame" prefHeight="40.0" prefWidth="109.0" text="Start Game" />
+      <Button layoutX="36.0" layoutY="107.0" mnemonicParsing="false" text="Easy">
          <font>
-            <Font name="Comic Sans MS" size="12.0" />
+            <Font name="Californian FB Italic" size="18.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../UI-background.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
-      <Button layoutX="438.0" layoutY="265.0" mnemonicParsing="false" text="Hard" />
+      <Button layoutX="320.0" layoutY="107.0" mnemonicParsing="false" text="Hard">
+         <graphic>
+            <ImageView fitHeight="143.0" fitWidth="206.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../style/backNight.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Californian FB Italic" size="18.0" />
+         </font></Button>
     </children>
 </AnchorPane>

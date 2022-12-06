@@ -23,7 +23,7 @@ public class Scene01controller {
 
 
     @FXML
-    void startGame(ActionEvent event) throws IOException {
+    void moveToNext(ActionEvent event) throws IOException {
         Data.text = txtName.getText();
         AnchorPane scene02 = FXMLLoader.load(getClass().getResource("/fxml/scene02.fxml"));
         scene01.getChildren().removeAll();

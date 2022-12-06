@@ -11,7 +11,7 @@ import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import static GamePlay.Play.CheckScore;
+//import static GamePlay.Play.CheckScore;
 
 
 /**
@@ -230,7 +230,7 @@ public class MyFrame extends JPanel implements KeyListener
 		{
 
 			outofBounds();
-			CheckScore();
+			//CheckScore();
 			eatBody();
 
 			bodyPoints.add(new Point(x, y));

@@ -27,7 +27,7 @@ public class Scene02controller   {
 
 
     @FXML
-    void startgame(ActionEvent event)throws IOException {
+    void startGame(ActionEvent event)throws IOException {
 
         System.out.println("Game Started");
         scene02.getChildren().removeAll();

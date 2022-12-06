@@ -84,7 +84,7 @@ public class Play extends MyFrame
 
 
 
-	public static void CheckScore(){
+	public void CheckScore(){
 		//format Daniel/:/100
 		if (mySnake.score > Integer.parseInt((highScore.split(":")[1]))){
 			//user set new record
