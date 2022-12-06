@@ -275,7 +275,7 @@ public class MyFrame extends JPanel implements KeyListener
 		private void outofBounds()
 		{
 			boolean xOut = (x <= 0 || x >= (870 - w));
-			boolean yOut = (y <= 40 || y >= (560 - h));
+			boolean yOut = (y <= 0 || y >= (560 - h));
 			if (xOut || yOut)
 			{
 				l = false;
