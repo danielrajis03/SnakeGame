@@ -48,7 +48,7 @@ public class Scene02controller   {
 
     @FXML
     void BG2(ActionEvent event){
-        setbackGround = 2;}
+        SetbackGround = 2;}
 
 
    /* @FXML
