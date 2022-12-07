@@ -1,11 +1,7 @@
 package GamePlay;
 
 import com.example.snake.model.Data;
-import example.Food;
-import example.ImageUtil;
-import example.MusicPlayer;
-import example.MyFrame;
-import example.Obstacles;
+import example.*;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -33,6 +29,7 @@ public class Play extends MyFrame
 	public static MySnake mySnake = new MySnake(100, 100);// x , y
 	public Food food = new Food();
 	public Obstacles obstacles = new Obstacles();
+	public Poison poison = new Poison();
 
 	public Image background = ImageUtil.images.get("UI-background");
 	public Image fail = ImageUtil.images.get("game-scene-01");
@@ -77,6 +74,7 @@ public class Play extends MyFrame
 			{
 				food = new Food();
 				obstacles = new Obstacles();
+				poison = new Poison();
 			}
 		} else
 		{
@@ -86,6 +84,11 @@ public class Play extends MyFrame
 		{
 			obstacles.draw(g);
 			obstacles.collides(mySnake);
+			CheckScore();
+		}
+		if(poison.l){
+			poison.draw(g);
+			poison.poisons(mySnake);
 			CheckScore();
 		}
 		drawScore(g);
