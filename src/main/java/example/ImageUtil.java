@@ -31,8 +31,11 @@ public class ImageUtil
 		images.put("14", GameUtil.getImage("food-pineapple.png"));
 		images.put("15", GameUtil.getImage("food-strawberry.png"));
 		images.put("16", GameUtil.getImage("food-watermelon.png"));
+		images.put("17", GameUtil.getImage("bombuse.png"));
+		images.put("18", GameUtil.getImage("walluse.png"));
 		images.put("UI-background", GameUtil.getImage("UI-background.png"));
 		images.put("game-scene-01", GameUtil.getImage("game-scene-01.jpg"));
 		images.put("UI-background2", GameUtil.getImage("UI-background2.png"));
+
 	}
 }

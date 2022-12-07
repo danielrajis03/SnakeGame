@@ -76,6 +76,7 @@ public class Play extends MyFrame
 			} else
 			{
 				food = new Food();
+				obstacles = new Obstacles();
 			}
 		} else
 		{
@@ -84,7 +85,8 @@ public class Play extends MyFrame
 		if (obstacles.l)
 		{
 			obstacles.draw(g);
-			obstacles.hit(mySnake);
+			obstacles.collides(mySnake);
+			CheckScore();
 		}
 		drawScore(g);
 	}
