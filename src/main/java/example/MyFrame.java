@@ -231,7 +231,7 @@ public class MyFrame extends JPanel implements KeyListener
 		{
 
 			outofBounds();
-			//CheckScore();
+
 			eatBody();
 
 			bodyPoints.add(new Point(x, y));
