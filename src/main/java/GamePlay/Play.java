@@ -53,7 +53,7 @@ public class Play extends MyFrame
 			background = ImageUtil.images.get("UI-background2");
 		}
 		super.paint(g);
-		if(highScore.equals("")){
+		if(gethighScore.equals("")){
 			highScore = this.GetHighScore();
 		}
 		if (playerName == null){

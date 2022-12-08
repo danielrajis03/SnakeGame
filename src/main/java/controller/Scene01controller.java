@@ -15,7 +15,8 @@ import java.io.IOException;
 public class Scene01controller {
 
     /**
-     * Initialising First screen(Where we get user name)
+     * Initialising First screen(Where we get user name) it's linked to
+     * Scene01 fxml
      */
     @FXML
     private AnchorPane scene01;
