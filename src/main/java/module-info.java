@@ -10,8 +10,8 @@ module example {
 
 
 
-    opens gameObjects to javafx.fxml;
-    exports gameObjects;
+    opens GameObjects to javafx.fxml;
+    exports GameObjects;
     opens controller;
     exports GamePlay;
     opens GamePlay to javafx.fxml;

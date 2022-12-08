@@ -1,4 +1,4 @@
-package gameObjects;
+package GameObjects;
 
 import java.awt.Graphics;
 import java.util.Random;

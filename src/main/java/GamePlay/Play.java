@@ -1,7 +1,7 @@
 package GamePlay;
 
 import Model.Data;
-import gameObjects.*;
+import GameObjects.*;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -10,15 +10,14 @@ import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.io.FileReader;
 import java.io.*;
-import static gameObjects.Main.playerName;
+import static GameObjects.Main.playerName;
 import static controller.Scene02controller.SetbackGround;
 
 /**
  * 
  * @Project Snake
- * @Description Spilaðu leikinn
+ * @Description A Snake Game implemented using Java FX.
  * @Author Daniel Rajis
- * @version
  */ 
 
 public class Play extends MyFrame
@@ -57,7 +56,7 @@ public class Play extends MyFrame
 			highScore = this.GetHighScore();
 		}
 		if (playerName == null){
-			playerName = Data.text ;
+			playerName = Data.getText();
 		}
 		//playerName = name.getText;
 		g.drawImage(background, 0, 0, null);
@@ -102,7 +101,7 @@ public class Play extends MyFrame
 		g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 30));
 		g.setColor(Color.MAGENTA);
 		g.drawString("SCORE : " + mySnake.score, 250, 40);
-		g.drawString("NAME : " + Data.text, 20, 40);
+		g.drawString("NAME : " + Data.getText(), 20, 40);
 		g.drawString("HIGH SCORE : " + highScore, 20, 68);
 	}
 

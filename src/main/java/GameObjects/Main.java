@@ -1,4 +1,4 @@
-package gameObjects;
+package GameObjects;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
