@@ -22,6 +22,11 @@ public class MusicPlayer extends Thread
 		this.filename = filename;
 	}
 
+	/**
+	 * @Description Assigns whatever(music/file) stored in the Buffer to player
+	 * and then Player.play();
+	 *
+	 */
 	public void play()
 	{
 		new Thread()

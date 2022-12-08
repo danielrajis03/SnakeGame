@@ -16,11 +16,9 @@ import static controller.Scene02controller.speed;
 
 
 /**
- * 
- * @Project Snakee
- * @Description Hladdu leikinn og endurnýjaðu hann stöðugt
- * @Author Sigurður Sigurðardóttir
- * @version Ekki viss
+ *
+ * @Author Sigurður Sigurðardóttir and Daniel Rajis
+
  */ 
 
 
@@ -30,21 +28,28 @@ public class MyFrame extends JPanel implements KeyListener
 
 	public JFrame jFrame = new JFrame();
 
+	/**
+	 * method that is implemented wherever the snake logo is to be used.
+	 */
 	public MyFrame()
 	{
 		jFrame.setIconImage(Toolkit.getDefaultToolkit().getImage("snake-logo.png"));
 	}
 
+	/**
+	 * @Description Method Responsible for loading the frame in which the
+	 * actual
+	 * snake game is played
+	 */
 	public void loadFrame()
 	{
-		/*
-		 * Komið í veg fyrir að myndin blikki.
-		 */
+
+
 		this.setDoubleBuffered(true);
 		jFrame.add(this);
 		jFrame.addKeyListener(this);
 
-		jFrame.setTitle("Snakee Yipee");
+		jFrame.setTitle("D1's Snake Game");
 		jFrame.setSize(870, 560);
 		jFrame.setLocationRelativeTo(null);
 		jFrame.addWindowListener(new WindowAdapter()// loka
@@ -101,17 +106,32 @@ public class MyFrame extends JPanel implements KeyListener
 
 	}
 
+	/**
+	 * Public Class that implements methods that entail how the snake
+	 * interacts with other game objects and how it effects the score.
+	 */
 	public static class MySnake extends SnakeObject implements movable
 	{
-		// Leikjabreytan.
+
+		/**
+		 *
+		 */
 		private int speed_XY;
+		/**
+		 * Initialisation of the variable for the length of the snake.
+		 */
 		private int length;
-		private int num; // ?
+		private int num;
+		/**
+		 * Initialisation of the variable for the score
+		 */
 		private int score = 0;
 
-		//
-
-		private static final BufferedImage IMG_SNAKE_HEAD = (BufferedImage) ImageUtil.getImages().get("snake-head-right");
+		/**
+		 * Variable holding the image of the Snake's Head
+		 */
+		private static final BufferedImage IMG_SNAKE_HEAD =
+			(BufferedImage) ImageUtil.getImages().get("snake-head-right");
 
 		private static List<Point> bodyPoints = new LinkedList<>();
 
@@ -262,7 +282,7 @@ public class MyFrame extends JPanel implements KeyListener
 		public void draw(Graphics g)
 		{
 
-			outofBounds();
+			outOfBounds();
 
 			eatBody();
 
@@ -304,7 +324,7 @@ public class MyFrame extends JPanel implements KeyListener
 			}
 		}
 
-		private void outofBounds()
+		private void outOfBounds()
 		{
 			boolean xOut = (getX() <= 0 || getX() >= (870 - getW()));
 			boolean yOut = (getY() <= 0 || getY() >= (560 - getH()));
@@ -315,10 +335,16 @@ public class MyFrame extends JPanel implements KeyListener
 			}
 		}
 
+		/**
+		 * @return speed_XY
+		 */
 		public int getSpeed_XY() {
 			return speed_XY;
 		}
 
+		/**
+		 * @param speed_XY
+		 */
 		public void setSpeed_XY(int speed_XY) {
 			this.speed_XY = speed_XY;
 		}
@@ -336,12 +362,16 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * Variable holding the score of the user
+		 * Gets Variable holding the score of the user
 		 */
 		public int getScore() {
 			return score;
 		}
 
+		/**
+		 * @param score
+		 * @Description Assigns Variable score
+		 */
 		public void setScore(int score) {
 			this.score = score;
 		}
