@@ -3,6 +3,11 @@ module example {
     requires javafx.fxml;
     requires java.desktop;
     requires jlayer;
+    requires junit;
+    requires javafx.graphics;
+    requires javafx.base;
+
+
 
 
     opens gameObjects to javafx.fxml;

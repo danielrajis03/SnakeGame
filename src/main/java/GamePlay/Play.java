@@ -101,7 +101,8 @@ public class Play extends MyFrame
 		CheckScore();
 		g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 30));
 		g.setColor(Color.MAGENTA);
-		g.drawString("SCORE : " + mySnake.score, 20, 40);
+		g.drawString("SCORE : " + mySnake.score, 250, 40);
+		g.drawString("NAME : " + Data.text, 20, 40);
 		g.drawString("HIGH SCORE : " + highScore, 20, 68);
 	}
 
