@@ -20,7 +20,7 @@ public class Scene02controller   {
      */
     public static int SetbackGround;
     /**
-     * @Description Variable used to set the Speed of the Snake
+     * @Description Variable used to represent the Speed of the Snake
      */
     public static int speed;
 
@@ -41,9 +41,10 @@ public class Scene02controller   {
 
 
     /**
-     * @param event
+     * @param event User clicks Start game button
      * @throws IOException
-     * @Description
+     * @Description Responsible for linking the "start game" button to the
+     * play class and starting the Game for the player.
      */
     @FXML
     void startGame(ActionEvent event)throws IOException {
@@ -56,29 +57,50 @@ public class Scene02controller   {
 
 
     }
+
+    /**
+     * @param event User clicks Background 1
+     * @Description Method responsible for setting the game background one.
+     */
     @FXML
     void BG1(ActionEvent event) {
         SetbackGround =1;
 
     }
 
+    /**
+     * @param event User clicks Background 2 button.
+     * @Description Method responsible for setting the game background Two.
+     */
     @FXML
     void BG2(ActionEvent event){
         SetbackGround = 2;}
 
+    /**
+     * @param event User clicks Easy difficulty button
+     * @Description Method responsible for setting the speed fo the snake for
+     * the easy level.
+     */
     @FXML
     void Easy(ActionEvent event) {
         speed = 5;
     }
 
+    /**
+     * @param event User clicks the hard difficulty button.
+     * @Description Method responsible for setting speed of the snake for
+     * the Hard level
+     */
     @FXML
     void Hard(ActionEvent event) {
         speed = 9;
     }
 
 
-
-
+    /**
+     * @Description Method responsible for Displaying the welcome medssage on
+     * screen two using the user input from "Data.getText()"
+     */
     @FXML
     void initialize() {
         txaWelcome.setText("Welcome " + Data.getText());
