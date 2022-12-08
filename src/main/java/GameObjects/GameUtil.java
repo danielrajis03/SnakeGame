@@ -8,8 +8,16 @@ import java.net.URL;
 
 import javax.imageio.ImageIO;
 
+
+/**
+ *
+ */
 public class GameUtil
 {
+	/**
+	 * @param imagePath
+	 * @return
+	 */
 	public static Image getImage(String imagePath)
 	{
 		URL u = GameUtil.class.getClassLoader().getResource(imagePath);
@@ -26,6 +34,12 @@ public class GameUtil
 		return i;
 	}
 
+	/**
+	 * @param bufferedImage
+	 * @param degree
+	 * @return
+	 * @Description Rotates image certain amount of degrees.
+	 */
 	public static Image rotateImage(final BufferedImage bufferedImage,
 									 final int degree)
 	{

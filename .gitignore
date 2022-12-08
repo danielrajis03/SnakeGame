@@ -11,6 +11,8 @@ target/
 *.iws
 *.iml
 *.ipr
+*.Snake.zip
+
 
 ### Eclipse ###
 .apt_generated

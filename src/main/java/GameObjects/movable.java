@@ -2,10 +2,10 @@ package GameObjects;
 
 /**
  * 
- * @Project Snakee
- * @Description Fyrsta viðmótið
- * @Author Sigurður Sigurðardóttir
- * @version Ekki viss
+ * @Project Snake
+ * @Description Responsible for calling the method responsible for the moving
+ * of the snake.
+ * @Author Sigurður Sigurðardóttir and Daniel Rajis
  */ 
 
 public interface movable

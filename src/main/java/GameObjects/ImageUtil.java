@@ -4,8 +4,16 @@ import java.awt.Image;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @Description Class responsible for the storing of images that can be fetched
+ * and used within the game.
+ */
 public class ImageUtil
 {
+	/**
+	 * @Description Variable that is placeholder of images that can be
+	 * fetched with "getImages"
+	 */
 	private static Map<String, Image> images = new HashMap<>();
 
 	static

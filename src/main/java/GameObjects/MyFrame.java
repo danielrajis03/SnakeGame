@@ -360,55 +360,95 @@ public class MyFrame extends JPanel implements KeyListener
 
 		public abstract void draw(Graphics g);
 
+		/**
+		 * @return coordinates of the rectangle
+		 * @Description Gets the with and height of rectangle
+		 */
 		public Rectangle getRectangle()
 		{
 			return new Rectangle(getX(), getY(), getW(), getH());
 		}
 
+		/**
+		 * @return x
+		 */
 		public int getX() {
 			return x;
 		}
 
+		/**
+		 * @param x
+		 */
 		public void setX(int x) {
 			this.x = x;
 		}
 
+		/**
+		 * @return y
+		 */
 		public int getY() {
 			return y;
 		}
 
+		/**
+		 * @param y
+		 */
 		public void setY(int y) {
 			this.y = y;
 		}
 
+		/**
+		 * @return I
+		 */
 		public Image getI() {
 			return i;
 		}
 
+		/**
+		 * @param i
+		 */
 		public void setI(Image i) {
 			this.i = i;
 		}
 
+		/**
+		 * @return w
+		 */
 		public int getW() {
 			return w;
 		}
 
+		/**
+		 * @param w
+		 */
 		public void setW(int w) {
 			this.w = w;
 		}
 
+		/**
+		 * @return h
+		 */
 		public int getH() {
 			return h;
 		}
 
+		/**
+		 * @param h
+		 */
 		public void setH(int h) {
 			this.h = h;
 		}
 
+		/**
+		 * @return l
+		 */
 		public boolean isL() {
 			return l;
 		}
 
+		/**
+		 * @param l
+		 */
 		public void setL(boolean l) {
 			this.l = l;
 		}
