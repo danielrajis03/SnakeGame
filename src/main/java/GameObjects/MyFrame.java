@@ -169,6 +169,9 @@ public class MyFrame extends JPanel implements KeyListener
 			return IMG_SNAKE_HEAD;
 		}
 
+		/**
+		 * @return bodyPoints
+		 */
 		public static List<Point> getBodyPoints() {
 			return bodyPoints;
 		}
