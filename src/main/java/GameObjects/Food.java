@@ -18,15 +18,15 @@ public class Food extends MyFrame.SnakeObject
 	 * sure it is within bounds and continues whilst the snake is true.
 	 */
 	public Food()	{
-		this.l = true;
+		this.setL(true);
 
-	this.i = ImageUtil.images.get(String.valueOf(new Random().nextInt(16)));
+	this.setI(ImageUtil.getImages().get(String.valueOf(new Random().nextInt(16))));
 
-		this.w = i.getWidth(null);
-		this.h = i.getHeight(null);
+		this.setW(getI().getWidth(null));
+		this.setH(getI().getHeight(null));
 
-		this.x = (int) (Math.random() * (870 - w + 10));
-		this.y = (int) (Math.random() * (560 - h - 40));
+		this.setX((int) (Math.random() * (870 - getW() + 10)));
+		this.setY((int) (Math.random() * (560 - getH() - 40)));
 	}
 
 	/**
@@ -37,9 +37,9 @@ public class Food extends MyFrame.SnakeObject
 	 */
 	public void eaten(MyFrame.MySnake mySnake)	{
 
-		if (mySnake.getRectangle().intersects(this.getRectangle()) && l &&
-		 mySnake.l)		{
-			this.l = false;
+		if (mySnake.getRectangle().intersects(this.getRectangle()) && isL() &&
+				mySnake.isL())		{
+			this.setL(false);
 			mySnake.changeLength(mySnake.getLength() + 1);
 			mySnake.setScore(mySnake.getScore() + 100);
 		}
@@ -55,6 +55,6 @@ public class Food extends MyFrame.SnakeObject
 	@Override
 	public void draw(Graphics g)
 	{
-		g.drawImage(i, x, y, null);
+		g.drawImage(getI(), getX(), getY(), null);
 	}
 }

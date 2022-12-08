@@ -14,16 +14,9 @@ import java.io.IOException;
 
 public class Scene01controller {
 
-    /**
-     * Initialising First screen(Where we get user name) it's linked to
-     * Scene01 fxml and receives user input and links to scene 02.
-     */
     @FXML
     private AnchorPane scene01;
 
-    /**
-     * Variable used to hold the user's name
-     */
     @FXML
     private TextField txtName;
 
@@ -34,11 +27,11 @@ public class Scene01controller {
      */
     @FXML
     void moveToNext(ActionEvent event) throws IOException {
-        Data.setText(txtName.getText());
+        Data.setText(getTxtName().getText());
         AnchorPane scene02 = FXMLLoader.load(getClass().getResource("/fxml" +
                 "/scene02.fxml"));
-        scene01.getChildren().removeAll();
-        scene01.getChildren().setAll(scene02);
+        getScene01().getChildren().removeAll();
+        getScene01().getChildren().setAll(scene02);
     }
 
     /**
@@ -57,6 +50,30 @@ public class Scene01controller {
      */
     @FXML
     void initialize() {
-        txtName.setText(Data.getText());
+        getTxtName().setText(Data.getText());
 
-}}
+}
+
+    /**
+     * Initialising First screen(Where we get user name) it's linked to
+     * Scene01 fxml and receives user input and links to scene 02.
+     */
+    public AnchorPane getScene01() {
+        return scene01;
+    }
+
+    public void setScene01(AnchorPane scene01) {
+        this.scene01 = scene01;
+    }
+
+    /**
+     * Variable used to hold the user's name
+     */
+    public TextField getTxtName() {
+        return txtName;
+    }
+
+    public void setTxtName(TextField txtName) {
+        this.txtName = txtName;
+    }
+}

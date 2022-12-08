@@ -12,27 +12,27 @@ public class Poison extends MyFrame.SnakeObject
 
 
     public Poison ()	{
-        this.l = true;
+        this.setL(true);
 
-        this.i = ImageUtil.images.get(String.valueOf(new Random().nextInt(19,21)));
+        this.setI(ImageUtil.getImages().get(String.valueOf(new Random().nextInt(19,21))));
 
-        this.w = i.getWidth(null);
-        this.h = i.getHeight(null);
+        this.setW(getI().getWidth(null));
+        this.setH(getI().getHeight(null));
 
-        this.x = (int) (Math.random() * (870 - w + 10));
-        this.y = (int) (Math.random() * (560 - h - 40));
+        this.setX((int) (Math.random() * (870 - getW() + 10)));
+        this.setY((int) (Math.random() * (560 - getH() - 40)));
     }
 
     public void poisons(MyFrame.MySnake mySnake)	{
 
-        if (mySnake.getRectangle().intersects(this.getRectangle()) && l && mySnake.l)		{
+        if (mySnake.getRectangle().intersects(this.getRectangle()) && isL() && mySnake.isL())		{
             mySnake.setScore(mySnake.getScore() - 10);
-            this.l = false;
+            this.setL(false);
         }
     }
     @Override
     public void draw(Graphics g)
     {
-        g.drawImage(i, x, y, null);
+        g.drawImage(getI(), getX(), getY(), null);
     }
 }

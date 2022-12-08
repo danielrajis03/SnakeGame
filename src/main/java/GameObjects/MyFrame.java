@@ -111,7 +111,7 @@ public class MyFrame extends JPanel implements KeyListener
 
 		//
 
-		private static final BufferedImage IMG_SNAKE_HEAD = (BufferedImage) ImageUtil.images.get("snake-head-right");
+		private static final BufferedImage IMG_SNAKE_HEAD = (BufferedImage) ImageUtil.getImages().get("snake-head-right");
 
 		private static List<Point> bodyPoints = new LinkedList<>();
 
@@ -126,12 +126,12 @@ public class MyFrame extends JPanel implements KeyListener
 		 */
 		public MySnake(int x, int y)
 		{
-			this.l = true;
-			this.x = x;
-			this.y = y;
-			this.i = ImageUtil.images.get("snake-body");
-			this.w = i.getWidth(null);
-			this.h = i.getHeight(null);
+			this.setL(true);
+			this.setX(x);
+			this.setY(y);
+			this.setI(ImageUtil.getImages().get("snake-body"));
+			this.setW(getI().getWidth(null));
+			this.setH(getI().getHeight(null));
 
 			this.setSpeed_XY(speed);
 			this.setLength(1);
@@ -139,7 +139,7 @@ public class MyFrame extends JPanel implements KeyListener
 			/*
 			 * Attention : ?
 			 */
-			this.setNum(w / getSpeed_XY());
+			this.setNum(getW() / getSpeed_XY());
 			setNewImgSnakeHead(getImgSnakeHead());
 
 		}
@@ -244,16 +244,16 @@ public class MyFrame extends JPanel implements KeyListener
 
 			if (up)
 			{
-				y -= getSpeed_XY();
+				setY(getY() - getSpeed_XY());
 			} else if (down)
 			{
-				y += getSpeed_XY();
+				setY(getY() + getSpeed_XY());
 			} else if (left)
 			{
-				x -= getSpeed_XY();
+				setX(getX() - getSpeed_XY());
 			} else if (right)
 			{
-				x += getSpeed_XY();
+				setX(getX() + getSpeed_XY());
 			}
 
 		}
@@ -266,13 +266,13 @@ public class MyFrame extends JPanel implements KeyListener
 
 			eatBody();
 
-			getBodyPoints().add(new Point(x, y));
+			getBodyPoints().add(new Point(getX(), getY()));
 
 			if (getBodyPoints().size() == (this.getLength() + 1) * getNum())
 			{
 				getBodyPoints().remove(0);
 			}
-			g.drawImage(getNewImgSnakeHead(), x, y, null);
+			g.drawImage(getNewImgSnakeHead(), getX(), getY(), null);
 			drawBody(g);
 
 			move();
@@ -286,7 +286,7 @@ public class MyFrame extends JPanel implements KeyListener
 				{
 					if (point.equals(point2) && point != point2)
 					{
-						this.l = false;
+						this.setL(false);
 						CheckScore();
 					}
 				}
@@ -300,17 +300,17 @@ public class MyFrame extends JPanel implements KeyListener
 			for (int i = length; i >= getNum(); i -= getNum())
 			{
 				Point point = getBodyPoints().get(i);
-				g.drawImage(this.i, point.x, point.y, null);
+				g.drawImage(this.getI(), point.x, point.y, null);
 			}
 		}
 
 		private void outofBounds()
 		{
-			boolean xOut = (x <= 0 || x >= (870 - w));
-			boolean yOut = (y <= 0 || y >= (560 - h));
+			boolean xOut = (getX() <= 0 || getX() >= (870 - getW()));
+			boolean yOut = (getY() <= 0 || getY() >= (560 - getH()));
 			if (xOut || yOut)
 			{
-				l = false;
+				setL(false);
 				CheckScore();
 			}
 		}
@@ -349,20 +349,68 @@ public class MyFrame extends JPanel implements KeyListener
 
 	public abstract static class SnakeObject
 	{
-		int x;
-		int y;
-		Image i;
-		int w;
-		int h;
+		private int x;
+		private int y;
+		private Image i;
+		private int w;
+		private int h;
 
-		public boolean l;
+		private boolean l;
 
 
 		public abstract void draw(Graphics g);
 
 		public Rectangle getRectangle()
 		{
-			return new Rectangle(x, y, w, h);
+			return new Rectangle(getX(), getY(), getW(), getH());
+		}
+
+		public int getX() {
+			return x;
+		}
+
+		public void setX(int x) {
+			this.x = x;
+		}
+
+		public int getY() {
+			return y;
+		}
+
+		public void setY(int y) {
+			this.y = y;
+		}
+
+		public Image getI() {
+			return i;
+		}
+
+		public void setI(Image i) {
+			this.i = i;
+		}
+
+		public int getW() {
+			return w;
+		}
+
+		public void setW(int w) {
+			this.w = w;
+		}
+
+		public int getH() {
+			return h;
+		}
+
+		public void setH(int h) {
+			this.h = h;
+		}
+
+		public boolean isL() {
+			return l;
+		}
+
+		public void setL(boolean l) {
+			this.l = l;
 		}
 	}
 }

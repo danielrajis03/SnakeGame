@@ -9,6 +9,14 @@ import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application  {
+    public static String getPlayerName() {
+        return playerName;
+    }
+
+    public static void setPlayerName(String playerName) {
+        Main.playerName = playerName;
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/scene01.fxml"));

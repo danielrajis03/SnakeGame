@@ -14,30 +14,38 @@ import java.io.IOException;
  * @Author Daniel Rajis
  */
 public class Scene02controller   {
-    /**
-     * @Description Responsible for setting the background of the actual Snake
-     * Gameplay
-     */
     public static int SetbackGround;
-    /**
-     * @Description Variable used to represent the Speed of the Snake
-     */
     public static int speed;
 
-    /**
-     * @Description Initialising Second screen where user selects level
-     * difficulty and background of their round.
-     */
     @FXML
     private AnchorPane scene02;
 
 
-    /**
-     * @Description Text displayed on scene two that outputs user input from
-     * "Data.getText()"
-     */
     @FXML
     private TextArea txaWelcome;
+
+    /**
+     * @Description Responsible for setting the background of the actual Snake
+     * Gameplay
+     */
+    public static int getSetbackGround() {
+        return SetbackGround;
+    }
+
+    public static void setSetbackGround(int setbackGround) {
+        SetbackGround = setbackGround;
+    }
+
+    /**
+     * @Description Variable used to represent the Speed of the Snake
+     */
+    public static int getSpeed() {
+        return speed;
+    }
+
+    public static void setSpeed(int speed) {
+        Scene02controller.speed = speed;
+    }
 
 
     /**
@@ -50,7 +58,7 @@ public class Scene02controller   {
     void startGame(ActionEvent event)throws IOException {
 
         System.out.println("Game Started");
-        scene02.getChildren().removeAll();
+        getScene02().getChildren().removeAll();
         new Play().loadFrame();
         MusicPlayer.getMusicPlay("src/main/resources/frogger.mp3");
 
@@ -64,7 +72,7 @@ public class Scene02controller   {
      */
     @FXML
     void BG1(ActionEvent event) {
-        SetbackGround =1;
+        setSetbackGround(1);
 
     }
 
@@ -74,7 +82,7 @@ public class Scene02controller   {
      */
     @FXML
     void BG2(ActionEvent event){
-        SetbackGround = 2;}
+        setSetbackGround(2);}
 
     /**
      * @param event User clicks Easy difficulty button
@@ -83,7 +91,7 @@ public class Scene02controller   {
      */
     @FXML
     void Easy(ActionEvent event) {
-        speed = 5;
+        setSpeed(5);
     }
 
     /**
@@ -93,7 +101,7 @@ public class Scene02controller   {
      */
     @FXML
     void Hard(ActionEvent event) {
-        speed = 9;
+        setSpeed(9);
     }
 
 
@@ -103,7 +111,31 @@ public class Scene02controller   {
      */
     @FXML
     void initialize() {
-        txaWelcome.setText("Welcome " + Data.getText());
+        getTxaWelcome().setText("Welcome " + Data.getText());
+    }
+
+    /**
+     * @Description Initialising Second screen where user selects level
+     * difficulty and background of their round.
+     */
+    public AnchorPane getScene02() {
+        return scene02;
+    }
+
+    public void setScene02(AnchorPane scene02) {
+        this.scene02 = scene02;
+    }
+
+    /**
+     * @Description Text displayed on scene two that outputs user input from
+     * "Data.getText()"
+     */
+    public TextArea getTxaWelcome() {
+        return txaWelcome;
+    }
+
+    public void setTxaWelcome(TextArea txaWelcome) {
+        this.txaWelcome = txaWelcome;
     }
 }
 

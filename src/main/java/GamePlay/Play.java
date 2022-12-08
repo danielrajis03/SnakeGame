@@ -30,8 +30,8 @@ public class Play extends MyFrame
 	public Obstacles obstacles = new Obstacles();
 	public Poison poison = new Poison();
 
-	public Image background = ImageUtil.images.get("UI-background");
-	public Image fail = ImageUtil.images.get("game-scene-01");
+	public Image background = ImageUtil.getImages().get("UI-background");
+	public Image fail = ImageUtil.getImages().get("game-scene-01");
 	public static String highScore = "";
 
 
@@ -46,10 +46,10 @@ public class Play extends MyFrame
 	public void paint(Graphics g)
 	{
 		if(SetbackGround ==1){
-			background = ImageUtil.images.get("UI-background");
+			background = ImageUtil.getImages().get("UI-background");
 		}
 		if (SetbackGround ==2){
-			background = ImageUtil.images.get("UI-background2");
+			background = ImageUtil.getImages().get("UI-background2");
 		}
 		super.paint(g);
 		if(highScore.equals("")){
@@ -62,10 +62,10 @@ public class Play extends MyFrame
 		g.drawImage(background, 0, 0, null);
 
 		// Ákveða stöðu leiksins.
-		if (mySnake.l)
+		if (mySnake.isL())
 		{
 			mySnake.draw(g);
-			if (food.l)
+			if (food.isL())
 			{
 				food.draw(g);
 				food.eaten(mySnake);
@@ -79,13 +79,13 @@ public class Play extends MyFrame
 		{
 			g.drawImage(fail, 115, 100, null);
 		}
-		if (obstacles.l)
+		if (obstacles.isL())
 		{
 			obstacles.draw(g);
 			obstacles.collides(mySnake);
 			CheckScore();
 		}
-		if(poison.l){
+		if(poison.isL()){
 			poison.draw(g);
 			poison.poisons(mySnake);
 			CheckScore();

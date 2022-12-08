@@ -11,21 +11,21 @@ public class Obstacles extends MyFrame.SnakeObject
 
 
     public Obstacles()	{
-        this.l = true;
+        this.setL(true);
         // String.valueOf(new Random().nextInt(16))
-        this.i = ImageUtil.images.get(String.valueOf(new Random().nextInt(17,19)));
+        this.setI(ImageUtil.getImages().get(String.valueOf(new Random().nextInt(17,19))));
 
-        this.w = i.getWidth(null);
-        this.h = i.getHeight(null);
+        this.setW(getI().getWidth(null));
+        this.setH(getI().getHeight(null));
 
-        this.x = (int) (Math.random() * (870 - w + 10));
-        this.y = (int) (Math.random() * (560 - h - 40));
+        this.setX((int) (Math.random() * (870 - getW() + 10)));
+        this.setY((int) (Math.random() * (560 - getH() - 40)));
     }
 
     public void collides(MyFrame.MySnake mySnake)	{
 
-        if (mySnake.getRectangle().intersects(this.getRectangle()) && l && mySnake.l)		{
-            mySnake.l = false;
+        if (mySnake.getRectangle().intersects(this.getRectangle()) && isL() && mySnake.isL())		{
+            mySnake.setL(false);
            // mySnake.changeLength(mySnake.getLength() + 1);
            // mySnake.score += 10;
         }
@@ -33,7 +33,7 @@ public class Obstacles extends MyFrame.SnakeObject
     @Override
     public void draw(Graphics g)
     {
-        g.drawImage(i, x, y, null);
+        g.drawImage(getI(), getX(), getY(), null);
     }
 }
 
