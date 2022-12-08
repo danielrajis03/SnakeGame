@@ -18,7 +18,7 @@ import static controller.Scene02controller.SetbackGround;
  * @Project Snake
  * @Description Spilaðu leikinn
  * @Author Daniel Rajis
- * @version Ekki viss
+ * @version
  */ 
 
 public class Play extends MyFrame
@@ -53,7 +53,7 @@ public class Play extends MyFrame
 			background = ImageUtil.images.get("UI-background2");
 		}
 		super.paint(g);
-		if(gethighScore.equals("")){
+		if(highScore.equals("")){
 			highScore = this.GetHighScore();
 		}
 		if (playerName == null){

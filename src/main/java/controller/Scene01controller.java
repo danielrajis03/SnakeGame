@@ -16,7 +16,7 @@ public class Scene01controller {
 
     /**
      * Initialising First screen(Where we get user name) it's linked to
-     * Scene01 fxml
+     * Scene01 fxml and receives user input and links to scene 02
      */
     @FXML
     private AnchorPane scene01;
