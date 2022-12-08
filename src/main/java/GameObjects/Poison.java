@@ -26,9 +26,10 @@ public class Poison extends MyFrame.SnakeObject
     }
 
     /**
-     * @param mySnake Body of Snake
      * {@code @Description} poisons make sure the users score will reduce by 10 if
-     * the snake overlaps with the poison image.
+     *       the snake overlaps with the poison image.
+     * @param mySnake Body of Snake
+     *
      */
     public void poisons(MyFrame.MySnake mySnake)	{
 

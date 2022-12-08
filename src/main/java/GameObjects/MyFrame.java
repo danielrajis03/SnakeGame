@@ -219,7 +219,8 @@ public class MyFrame extends JPanel implements KeyListener
 					left = false;
 					right = false;
 
-					setNewImgSnakeHead((BufferedImage) GameUtil.rotateImage(getImgSnakeHead(), -90));
+					setNewImgSnakeHead((BufferedImage) GameUtil.rotateImage
+					(getImgSnakeHead(), -90));
 				}
 				break;
 
@@ -231,7 +232,8 @@ public class MyFrame extends JPanel implements KeyListener
 					left = false;
 					right = false;
 
-					setNewImgSnakeHead((BufferedImage) GameUtil.rotateImage(getImgSnakeHead(), 90));
+					setNewImgSnakeHead((BufferedImage) GameUtil.rotateImage
+					 (getImgSnakeHead(), 90));
 				}
 				break;
 
@@ -243,7 +245,8 @@ public class MyFrame extends JPanel implements KeyListener
 					left = true;
 					right = false;
 
-					setNewImgSnakeHead((BufferedImage) GameUtil.rotateImage(getImgSnakeHead(), -180));
+					setNewImgSnakeHead((BufferedImage) GameUtil.rotateImage
+					(getImgSnakeHead(), -180));
 
 				}
 				break;
@@ -332,9 +335,10 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * @param g Graphics g
 		 * Make sure that the size of the snake is increasing
-		 * with each fruit it eats.
+		 * 		  with each fruit it eats.
+		 * @param g Graphics g
+		 *
 		 */
 		public void drawBody(Graphics g)
 		{
@@ -372,6 +376,7 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
+		 *
 		 * @param speed_XY Speed of snake
 		 */
 		public void setSpeed_XY(int speed_XY) {
@@ -404,8 +409,9 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
+		 * Assigns Variable score
 		 * @param score User Score
-		 *  Assigns Variable score
+		 *
 		 */
 		public void setScore(int score) {
 			this.score = score;
@@ -427,8 +433,9 @@ public class MyFrame extends JPanel implements KeyListener
 		public abstract void draw(Graphics g);
 
 		/**
+		 * Gets the with and height of rectangle
 		 * @return coordinates of the rectangle
-		 *  Gets the with and height of rectangle
+		 *
 		 */
 		public Rectangle getRectangle()
 		{

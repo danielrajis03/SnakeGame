@@ -130,7 +130,7 @@ public class Play extends MyFrame
 	 * {@code @Description} The method for drawing the Name of the user along with
 	 * 	  their
 	 * 	  current and highscore
-	 * @param g G
+	 * @param g g
 	 *
 	 */
 	public void drawScore(Graphics g)

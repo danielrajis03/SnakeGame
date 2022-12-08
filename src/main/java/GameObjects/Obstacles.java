@@ -26,9 +26,10 @@ public class Obstacles extends MyFrame.SnakeObject
 
 
     /**
-     * @param mySnake Body of snake
      * {@code @Description} Collides will kill the snake and end the game if the
-     * snake overlaps with the obstacle images.
+     *       snake overlaps with the obstacle images.
+     * @param mySnake Body of snake
+     *
      */
     public void collides(MyFrame.MySnake mySnake)	{
 
