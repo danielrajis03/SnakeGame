@@ -26,13 +26,36 @@ public class Play extends MyFrame
 	private static final long serialVersionUID = -3641221053272056036L;
 
 	public static MySnake mySnake = new MySnake(100, 100);// x , y
+	/**
+	 * Variable food representing the images of the fruit in the game and how
+	 * they interact with other objects such as the snake
+	 */
 	public Food food = new Food();
+	/**
+	 * Obstacles is the variable that represents the wall and bombs and how
+	 * they interact with other objects such as the snake.
+	 */
 	public Obstacles obstacles = new Obstacles();
+	/**
+	 * Poison is the variable that represents the poison images and how
+	 * 	  they interact with other objects such as the snake.
+	 */
 	public Poison poison = new Poison();
 
 
+	/**
+	 * Variable that holds the background and any image currently assigned to
+	 * it.
+	 */
 	public Image background = ImageUtil.getImages().get("UI-background");
+	/**
+	 * Variable for the screen if the game ends.
+	 */
 	public Image fail = ImageUtil.getImages().get("game-scene-01");
+	/**
+	 * highscore is a string variable that will hold the highscore in format
+	 * "name:score"
+	 */
 	public static String highScore = "";
 
 
@@ -43,6 +66,12 @@ public class Play extends MyFrame
 		mySnake.keyPressed(e);
 	}
 
+	/**
+	 * @param g the <code>Graphics</code> context in which to paint
+	 * @Description Paint is the method that implements the setting of
+	 * background choice, the spawning of food,obstacles and poison and the
+	 * fetching and printing of the highscore.
+	 */
 	@Override
 	public void paint(Graphics g)
 	{
@@ -96,6 +125,12 @@ public class Play extends MyFrame
 
 	}
 
+	/**
+	 * @param g
+	 * @Description The method for drawing the Name of the user along with
+	 * their
+	 * current and highscore
+	 */
 	public void drawScore(Graphics g)
 	{
 		CheckScore();
@@ -107,7 +142,12 @@ public class Play extends MyFrame
 	}
 
 
-
+	/**
+	 * Checks to see if the current score is higher than the current
+	 * highscore and then sets the format of the highscore.dat file and
+	 * assigns a new highscore
+	 * to the file once the user sets a new record
+	 */
 	public static void CheckScore(){
 		//format Daniel/:/100
 		if (mySnake.getScore() > Integer.parseInt((highScore.split(":")[1]))){
@@ -150,6 +190,12 @@ public class Play extends MyFrame
 		MusicPlayer.getMusicPlay("src/main/resources/frogger.mp3");
 
 	}
+
+	/**
+	 * @return
+	 * @Description Method responsible for fetching the highscore from the
+	 * highscore.dat file
+	 */
 	public String GetHighScore()
 	{
 		//format:  Daniel:100
@@ -176,22 +222,5 @@ public class Play extends MyFrame
 
 
 
-/*	
-	public static void main(String[] args)
-	{
-		JFrame frame = new JFrame();
-		// frame.setSize(400,600);
-		frame.setBounds(450, 200, 920, 600);
-		// frame.setResizable(false);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		SnakePanel panel = new SnakePanel();
-		frame.add(panel);
-
-		frame.setVisible(true);
-
-		// Play the background music.
-		MusicPlayer.getMusicPlay("resource\\music\\background.mp3");
-	} 
-*/
 }

@@ -10,7 +10,9 @@ public class Poison extends MyFrame.SnakeObject
     private static final long serialVersionUID = -3641221053272056036L;
 
 
-
+    /**
+     * Poison will randomly spawn a poison image from within the bound.
+     */
     public Poison ()	{
         this.setL(true);
 
@@ -23,6 +25,11 @@ public class Poison extends MyFrame.SnakeObject
         this.setY((int) (Math.random() * (560 - getH() - 40)));
     }
 
+    /**
+     * @param mySnake
+     * @Description poisons make sure the users score will reduce by 10 if
+     * the snake overlaps with the poison image.
+     */
     public void poisons(MyFrame.MySnake mySnake)	{
 
         if (mySnake.getRectangle().intersects(this.getRectangle()) && isL() && mySnake.isL())		{
