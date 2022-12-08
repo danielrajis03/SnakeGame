@@ -12,12 +12,12 @@ module example {
 
     opens GameObjects to javafx.fxml;
     exports GameObjects;
-    opens controller;
+    opens Controller;
     exports GamePlay;
     opens GamePlay to javafx.fxml;
     
 
-    exports controller;
+    exports Controller;
     opens fxml;
     //opens food;
     exports Model;

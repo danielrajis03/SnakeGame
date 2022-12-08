@@ -1,4 +1,4 @@
-package controller;
+package Controller;
 
 import GamePlay.Play;
 import Model.Data;

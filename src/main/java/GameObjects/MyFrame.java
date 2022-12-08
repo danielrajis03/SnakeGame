@@ -12,7 +12,7 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import static GamePlay.Play.CheckScore;
-import static controller.Scene02controller.speed;
+import static Controller.Scene02controller.speed;
 
 
 /**
@@ -176,14 +176,13 @@ public class MyFrame extends JPanel implements KeyListener
 			return bodyPoints;
 		}
 
-		public static void setBodyPoints(List<Point> bodyPoints) {
-			MySnake.bodyPoints = bodyPoints;
-		}
-
 		public static BufferedImage getNewImgSnakeHead() {
 			return newImgSnakeHead;
 		}
 
+		/**
+		 * @param newImgSnakeHead
+		 */
 		public static void setNewImgSnakeHead(BufferedImage newImgSnakeHead) {
 			MySnake.newImgSnakeHead = newImgSnakeHead;
 		}
@@ -193,6 +192,10 @@ public class MyFrame extends JPanel implements KeyListener
 			return length;
 		}
 
+		/**
+		 * @param length
+		 * Changes size of variable "length"
+		 */
 		public void changeLength(int length)
 		{
 			this.setLength(length);
@@ -260,6 +263,9 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 
+		/**
+		 * Public method for declaring the movement of the snake.
+		 */
 		public void move()
 		{
 			/**
@@ -282,6 +288,11 @@ public class MyFrame extends JPanel implements KeyListener
 
 		}
 
+		/**
+		 * @param g
+		 * Public method that implements the rules for the snake being out of
+		 * bounds, eating fruit, and its movement.
+		 */
 		@Override
 		public void draw(Graphics g)
 		{
@@ -302,6 +313,9 @@ public class MyFrame extends JPanel implements KeyListener
 			move();
 		}
 
+		/**
+		 *Method makes sure that if the snake overlaps with itself it will die.
+		 */
 		public void eatBody()
 		{
 			for (Point point : getBodyPoints())
@@ -317,6 +331,11 @@ public class MyFrame extends JPanel implements KeyListener
 			}
 		}
 
+		/**
+		 * @param g
+		 * @Description Make sure that the size of the snake is increasing
+		 * with each fruit it eats.
+		 */
 		public void drawBody(Graphics g)
 		{
 			int length = getBodyPoints().size() - 1 - getNum();
@@ -328,6 +347,12 @@ public class MyFrame extends JPanel implements KeyListener
 			}
 		}
 
+		/**
+		 * Makes sure that the dimension of the game screen is correct so
+		 * that the snake can move around the whole screen.If snake goes
+		 * outofBounds it will die.
+		 *
+		 */
 		private void outOfBounds()
 		{
 			boolean xOut = (getX() <= 0 || getX() >= (870 - getW()));
@@ -357,10 +382,16 @@ public class MyFrame extends JPanel implements KeyListener
 			this.length = length;
 		}
 
+		/**
+		 * @return num
+		 */
 		public int getNum() {
 			return num;
 		}
 
+		/**
+		 * @param num
+		 */
 		public void setNum(int num) {
 			this.num = num;
 		}
@@ -380,6 +411,7 @@ public class MyFrame extends JPanel implements KeyListener
 			this.score = score;
 		}
 	}
+
 
 	public abstract static class SnakeObject
 	{

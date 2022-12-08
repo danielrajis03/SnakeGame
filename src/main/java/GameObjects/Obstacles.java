@@ -9,10 +9,14 @@ public class Obstacles extends MyFrame.SnakeObject
     private static final long serialVersionUID = -3641221053272056036L;
 
 
-
+    /**
+     * The obstacles method will randomly spawn either bomb or wall images
+     * within the
+     * bound.
+     */
     public Obstacles()	{
         this.setL(true);
-        // String.valueOf(new Random().nextInt(16))
+
         this.setI(ImageUtil.getImages().get(String.valueOf(new Random().nextInt(17,19))));
 
         this.setW(getI().getWidth(null));
@@ -22,14 +26,23 @@ public class Obstacles extends MyFrame.SnakeObject
         this.setY((int) (Math.random() * (560 - getH() - 40)));
     }
 
+
+    /**
+     * @param mySnake
+     * @Description Collides will kill the snake and end the game if the
+     * snake overlaps with the obstacle images.
+     */
     public void collides(MyFrame.MySnake mySnake)	{
 
         if (mySnake.getRectangle().intersects(this.getRectangle()) && isL() && mySnake.isL())		{
             mySnake.setL(false);
-           // mySnake.changeLength(mySnake.getLength() + 1);
-           // mySnake.score += 10;
+
         }
     }
+
+    /**
+     * @param g
+     */
     @Override
     public void draw(Graphics g)
     {

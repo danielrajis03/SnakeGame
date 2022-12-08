@@ -11,7 +11,7 @@ import java.awt.event.KeyEvent;
 import java.io.FileReader;
 import java.io.*;
 import static GameObjects.Main.playerName;
-import static controller.Scene02controller.SetbackGround;
+import static Controller.Scene02controller.SetbackGround;
 
 /**
  * 
@@ -29,6 +29,7 @@ public class Play extends MyFrame
 	public Food food = new Food();
 	public Obstacles obstacles = new Obstacles();
 	public Poison poison = new Poison();
+
 
 	public Image background = ImageUtil.getImages().get("UI-background");
 	public Image fail = ImageUtil.getImages().get("game-scene-01");
