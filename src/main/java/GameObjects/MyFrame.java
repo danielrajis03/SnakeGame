@@ -107,17 +107,23 @@ public class MyFrame extends JPanel implements KeyListener
 		private int speed_XY;
 		private int length;
 		private int num; // ?
-		public int score = 0;
+		private int score = 0;
 
 		//
 
 		private static final BufferedImage IMG_SNAKE_HEAD = (BufferedImage) ImageUtil.images.get("snake-head-right");
 
-		public static List<Point> bodyPoints = new LinkedList<>();
+		private static List<Point> bodyPoints = new LinkedList<>();
 
 		private static BufferedImage newImgSnakeHead;
 		boolean up, down, left, right = true;
 
+		/**
+		 * @param x
+		 * @param y
+		 * Represents the body of the snake. Method used to initialise its
+		 * length and image.
+		 */
 		public MySnake(int x, int y)
 		{
 			this.l = true;
@@ -127,15 +133,35 @@ public class MyFrame extends JPanel implements KeyListener
 			this.w = i.getWidth(null);
 			this.h = i.getHeight(null);
 
-			this.speed_XY = speed;
-			this.length = 1;
+			this.setSpeed_XY(speed);
+			this.setLength(1);
 
 			/*
 			 * Attention : ?
 			 */
-			this.num = w / speed_XY;
-			newImgSnakeHead = IMG_SNAKE_HEAD;
+			this.setNum(w / getSpeed_XY());
+			setNewImgSnakeHead(getImgSnakeHead());
 
+		}
+
+		public static BufferedImage getImgSnakeHead() {
+			return IMG_SNAKE_HEAD;
+		}
+
+		public static List<Point> getBodyPoints() {
+			return bodyPoints;
+		}
+
+		public static void setBodyPoints(List<Point> bodyPoints) {
+			MySnake.bodyPoints = bodyPoints;
+		}
+
+		public static BufferedImage getNewImgSnakeHead() {
+			return newImgSnakeHead;
+		}
+
+		public static void setNewImgSnakeHead(BufferedImage newImgSnakeHead) {
+			MySnake.newImgSnakeHead = newImgSnakeHead;
 		}
 
 		public int getLength()
@@ -145,7 +171,7 @@ public class MyFrame extends JPanel implements KeyListener
 
 		public void changeLength(int length)
 		{
-			this.length = length;
+			this.setLength(length);
 		}
 
 		public void keyPressed(KeyEvent e)
@@ -164,7 +190,7 @@ public class MyFrame extends JPanel implements KeyListener
 					left = false;
 					right = false;
 
-					newImgSnakeHead = (BufferedImage) GameUtil.rotateImage(IMG_SNAKE_HEAD, -90);
+					setNewImgSnakeHead((BufferedImage) GameUtil.rotateImage(getImgSnakeHead(), -90));
 				}
 				break;
 
@@ -176,7 +202,7 @@ public class MyFrame extends JPanel implements KeyListener
 					left = false;
 					right = false;
 
-					newImgSnakeHead = (BufferedImage) GameUtil.rotateImage(IMG_SNAKE_HEAD, 90);
+					setNewImgSnakeHead((BufferedImage) GameUtil.rotateImage(getImgSnakeHead(), 90));
 				}
 				break;
 
@@ -188,7 +214,7 @@ public class MyFrame extends JPanel implements KeyListener
 					left = true;
 					right = false;
 
-					newImgSnakeHead = (BufferedImage) GameUtil.rotateImage(IMG_SNAKE_HEAD, -180);
+					setNewImgSnakeHead((BufferedImage) GameUtil.rotateImage(getImgSnakeHead(), -180));
 
 				}
 				break;
@@ -201,7 +227,7 @@ public class MyFrame extends JPanel implements KeyListener
 					left = false;
 					right = true;
 
-					newImgSnakeHead = IMG_SNAKE_HEAD;
+					setNewImgSnakeHead(getImgSnakeHead());
 				}
 
 			default:
@@ -218,16 +244,16 @@ public class MyFrame extends JPanel implements KeyListener
 
 			if (up)
 			{
-				y -= speed_XY;
+				y -= getSpeed_XY();
 			} else if (down)
 			{
-				y += speed_XY;
+				y += getSpeed_XY();
 			} else if (left)
 			{
-				x -= speed_XY;
+				x -= getSpeed_XY();
 			} else if (right)
 			{
-				x += speed_XY;
+				x += getSpeed_XY();
 			}
 
 		}
@@ -240,13 +266,13 @@ public class MyFrame extends JPanel implements KeyListener
 
 			eatBody();
 
-			bodyPoints.add(new Point(x, y));
+			getBodyPoints().add(new Point(x, y));
 
-			if (bodyPoints.size() == (this.length + 1) * num)
+			if (getBodyPoints().size() == (this.getLength() + 1) * getNum())
 			{
-				bodyPoints.remove(0);
+				getBodyPoints().remove(0);
 			}
-			g.drawImage(newImgSnakeHead, x, y, null);
+			g.drawImage(getNewImgSnakeHead(), x, y, null);
 			drawBody(g);
 
 			move();
@@ -254,9 +280,9 @@ public class MyFrame extends JPanel implements KeyListener
 
 		public void eatBody()
 		{
-			for (Point point : bodyPoints)
+			for (Point point : getBodyPoints())
 			{
-				for (Point point2 : bodyPoints)
+				for (Point point2 : getBodyPoints())
 				{
 					if (point.equals(point2) && point != point2)
 					{
@@ -269,11 +295,11 @@ public class MyFrame extends JPanel implements KeyListener
 
 		public void drawBody(Graphics g)
 		{
-			int length = bodyPoints.size() - 1 - num;
+			int length = getBodyPoints().size() - 1 - getNum();
 
-			for (int i = length; i >= num; i -= num)
+			for (int i = length; i >= getNum(); i -= getNum())
 			{
-				Point point = bodyPoints.get(i);
+				Point point = getBodyPoints().get(i);
 				g.drawImage(this.i, point.x, point.y, null);
 			}
 		}
@@ -287,6 +313,37 @@ public class MyFrame extends JPanel implements KeyListener
 				l = false;
 				CheckScore();
 			}
+		}
+
+		public int getSpeed_XY() {
+			return speed_XY;
+		}
+
+		public void setSpeed_XY(int speed_XY) {
+			this.speed_XY = speed_XY;
+		}
+
+		public void setLength(int length) {
+			this.length = length;
+		}
+
+		public int getNum() {
+			return num;
+		}
+
+		public void setNum(int num) {
+			this.num = num;
+		}
+
+		/**
+		 * Variable holding the score of the user
+		 */
+		public int getScore() {
+			return score;
+		}
+
+		public void setScore(int score) {
+			this.score = score;
 		}
 	}
 

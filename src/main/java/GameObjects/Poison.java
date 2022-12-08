@@ -26,7 +26,7 @@ public class Poison extends MyFrame.SnakeObject
     public void poisons(MyFrame.MySnake mySnake)	{
 
         if (mySnake.getRectangle().intersects(this.getRectangle()) && l && mySnake.l)		{
-            mySnake.score -= 10;
+            mySnake.setScore(mySnake.getScore() - 10);
             this.l = false;
         }
     }
