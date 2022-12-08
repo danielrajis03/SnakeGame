@@ -15,12 +15,12 @@ module example {
     opens controller;
     exports GamePlay;
     opens GamePlay to javafx.fxml;
-    opens com.example.snake to javafx.fxml;
+    
 
     exports controller;
     opens fxml;
     //opens food;
-    exports com.example.snake.model;
-    opens com.example.snake.model to javafx.fxml;
+    exports Model;
+    opens Model to javafx.fxml;
 }
 

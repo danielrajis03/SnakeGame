@@ -17,7 +17,7 @@ public class Food extends MyFrame.SnakeObject
 	public Food()	{
 		this.l = true;
 
-		this.i = ImageUtil.images.get(String.valueOf(new Random().nextInt(16)));
+	this.i = ImageUtil.images.get(String.valueOf(new Random().nextInt(16)));
 
 		this.w = i.getWidth(null);
 		this.h = i.getHeight(null);
@@ -28,7 +28,8 @@ public class Food extends MyFrame.SnakeObject
 
 	public void eaten(MyFrame.MySnake mySnake)	{
 
-		if (mySnake.getRectangle().intersects(this.getRectangle()) && l && mySnake.l)		{
+		if (mySnake.getRectangle().intersects(this.getRectangle()) && l &&
+		 mySnake.l)		{
 			this.l = false;
 			mySnake.changeLength(mySnake.getLength() + 1);
 			mySnake.score += 100;

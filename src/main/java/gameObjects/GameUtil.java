@@ -26,7 +26,8 @@ public class GameUtil
 		return i;
 	}
 
-	public static Image rotateImage(final BufferedImage bufferedImage, final int degree)
+	public static Image rotateImage(final BufferedImage bufferedImage,
+									 final int degree)
 	{
 	int w = bufferedImage.getWidth();
 	int h = bufferedImage.getHeight();
@@ -35,7 +36,9 @@ public class GameUtil
 	BufferedImage i;
 	Graphics2D graphics2d;
 
-	(graphics2d = (i = new BufferedImage(w, h, t)).createGraphics()).setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+	(graphics2d = (i = new BufferedImage(w, h, t)).createGraphics())
+		.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
+			RenderingHints.VALUE_INTERPOLATION_BILINEAR);
 
 	graphics2d.rotate(Math.toRadians(degree), w / 2, h / 2);
 	graphics2d.drawImage(bufferedImage, 0, 0, null);

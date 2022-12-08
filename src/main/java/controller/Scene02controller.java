@@ -1,7 +1,7 @@
 package controller;
 
 import GamePlay.Play;
-import com.example.snake.model.Data;
+import Model.Data;
 import gameObjects.MusicPlayer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -57,12 +57,7 @@ public class Scene02controller   {
     }
 
 
-   /* @FXML
-    void sayBye(ActionEvent event)throws IOException {
-        AnchorPane scene01 = FXMLLoader.load(Main.class.getClass().getResource("fxml/scene01.fxml"));
-        scene02.getChildren().removeAll();
-        scene02.getChildren().setAll(scene01);
-    }*/
+
 
     @FXML
     void initialize() {

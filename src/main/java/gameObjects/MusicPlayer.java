@@ -25,8 +25,10 @@ public class MusicPlayer extends Thread
 				super.run();
 				try
 				{
-					//BufferedInputStream buffer = new BufferedInputStream(new FileInputStream(filename));
-					player = new Player(new BufferedInputStream(new FileInputStream(filename)));
+
+					player =
+						new Player(new BufferedInputStream(new
+							FileInputStream(filename)));
 					player.play();
 
 				} catch (Exception e)

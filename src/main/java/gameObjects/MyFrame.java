@@ -150,7 +150,10 @@ public class MyFrame extends JPanel implements KeyListener
 
 		public void keyPressed(KeyEvent e)
 		{
-			// athugaðu lykilinn
+			/**
+			 * @Author athugaðu lykilinn and Daniel Rajis
+ 			 */
+
 			switch (e.getKeyCode())
 			{
 			case KeyEvent.VK_UP:
@@ -209,7 +212,10 @@ public class MyFrame extends JPanel implements KeyListener
 
 		public void move()
 		{
-			// láta kvikindið hreyfa sig
+			/**
+			 * @Author láta kvikindið hreyfa sig and Daniel Rajis
+			 */
+
 			if (up)
 			{
 				y -= speed_XY;

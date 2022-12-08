@@ -1,6 +1,6 @@
 package GamePlay;
 
-import com.example.snake.model.Data;
+import Model.Data;
 import gameObjects.*;
 
 import java.awt.Color;
