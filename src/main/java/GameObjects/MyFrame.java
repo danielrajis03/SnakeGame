@@ -197,7 +197,7 @@ public class MyFrame extends JPanel implements KeyListener
 
 		/**
 		 * Changes size of variable "length"
-		 * @param length
+		 * @param length length
 		 *
 		 */
 		public void changeLength(int length)

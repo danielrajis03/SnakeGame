@@ -91,7 +91,8 @@ public class Scene02controller   {
         setSetbackGround(2);}
 
     /**
-     * @code @Description} Method responsible for setting the speed fo the snake for
+     * {@code @Description} Method responsible for setting the speed fo the
+     * snake for
      *       the easy level.
      * @param event User clicks Easy difficulty button
      *

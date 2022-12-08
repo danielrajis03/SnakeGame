@@ -7,8 +7,6 @@ import java.util.Random;
 public class Poison extends MyFrame.SnakeObject
 {
 
-    private static final long serialVersionUID = -3641221053272056036L;
-
 
     /**
      * Poison will randomly spawn a poison image from within the bound.

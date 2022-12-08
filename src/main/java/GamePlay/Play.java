@@ -68,7 +68,7 @@ public class Play extends MyFrame
 	}
 
 	/**
-	 * @code @Description} Paint is the method that implements the setting of
+	 * {@code @Description} Paint is the method that implements the setting of
 	 * 	  background choice, the spawning of food,obstacles and poison and the
 	 * 	  fetching and printing of the highscore.
 	 * @param g the <code>Graphics</code> context in which to paint
