@@ -1,9 +1,7 @@
-package example;
+package gameObjects;
 
 import java.awt.Graphics;
 import java.util.Random;
-import java.awt.Graphics2D;
-import java.awt.Image;
 
 public class Food extends MyFrame.SnakeObject
 {

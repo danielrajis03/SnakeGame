@@ -1,14 +1,10 @@
 package controller;
 
 import GamePlay.Play;
-import example.Main;
 import com.example.snake.model.Data;
-import example.MusicPlayer;
+import gameObjects.MusicPlayer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 

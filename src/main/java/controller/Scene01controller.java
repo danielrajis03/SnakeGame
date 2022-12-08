@@ -1,16 +1,12 @@
 package controller;
-import example.Main;
 import com.example.snake.model.Data;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
-import java.util.Objects;
-
 
 
 public class Scene01controller {

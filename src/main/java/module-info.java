@@ -5,8 +5,8 @@ module example {
     requires jlayer;
 
 
-    opens example to javafx.fxml;
-    exports example;
+    opens gameObjects to javafx.fxml;
+    exports gameObjects;
     opens controller;
     exports GamePlay;
     opens GamePlay to javafx.fxml;

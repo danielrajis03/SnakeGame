@@ -1,7 +1,7 @@
 package GamePlay;
 
 import com.example.snake.model.Data;
-import example.*;
+import gameObjects.*;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -10,7 +10,7 @@ import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.io.FileReader;
 import java.io.*;
-import static example.Main.playerName;
+import static gameObjects.Main.playerName;
 import static controller.Scene02controller.SetbackGround;
 
 /**
@@ -92,10 +92,13 @@ public class Play extends MyFrame
 			CheckScore();
 		}
 		drawScore(g);
+
+
 	}
 
 	public void drawScore(Graphics g)
 	{
+		CheckScore();
 		g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 30));
 		g.setColor(Color.MAGENTA);
 		g.drawString("SCORE : " + mySnake.score, 20, 40);

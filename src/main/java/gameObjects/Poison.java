@@ -1,19 +1,20 @@
-package example;
+package gameObjects;
+
 
 import java.awt.Graphics;
 import java.util.Random;
 
-public class Obstacles extends MyFrame.SnakeObject
+public class Poison extends MyFrame.SnakeObject
 {
 
     private static final long serialVersionUID = -3641221053272056036L;
 
 
 
-    public Obstacles()	{
+    public Poison ()	{
         this.l = true;
-        // String.valueOf(new Random().nextInt(16))
-        this.i = ImageUtil.images.get(String.valueOf(new Random().nextInt(17,19)));
+
+        this.i = ImageUtil.images.get(String.valueOf(new Random().nextInt(19,21)));
 
         this.w = i.getWidth(null);
         this.h = i.getHeight(null);
@@ -22,12 +23,11 @@ public class Obstacles extends MyFrame.SnakeObject
         this.y = (int) (Math.random() * (560 - h - 40));
     }
 
-    public void collides(MyFrame.MySnake mySnake)	{
+    public void poisons(MyFrame.MySnake mySnake)	{
 
         if (mySnake.getRectangle().intersects(this.getRectangle()) && l && mySnake.l)		{
-            mySnake.l = false;
-           // mySnake.changeLength(mySnake.getLength() + 1);
-           // mySnake.score += 10;
+            mySnake.score -= 10;
+            this.l = false;
         }
     }
     @Override
@@ -36,4 +36,3 @@ public class Obstacles extends MyFrame.SnakeObject
         g.drawImage(i, x, y, null);
     }
 }
-

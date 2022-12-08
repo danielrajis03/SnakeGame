@@ -1,4 +1,4 @@
-package example;
+package gameObjects;
 
 import java.awt.Image;
 import java.util.HashMap;

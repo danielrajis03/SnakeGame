@@ -1,4 +1,4 @@
-package example;
+package gameObjects;
 
 public class Snake {
 	

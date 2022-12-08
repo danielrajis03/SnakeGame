@@ -13,6 +13,11 @@ Please select a background of your choice AND a difficulty level before trying t
 <> Increase your score by collecting fruits.
 <> The length of your snake will also increase with the amount of fruit you eat.
 <> Avoid the obstacles like bombs and walls that will spawn and kill your snake, ending the game.
-
+<> Also be sure to avoid the poison that subtracts 10 from your current score.
+<> Beware of going out of bounds as this will also result in the 
+game ending.
+<> Your name and score will be displayed in the top left of your screen.
+<> If you beat the current highscore it will update in your top left and be displayed once the round ends.
+# Enjoy Playing!
 
 
