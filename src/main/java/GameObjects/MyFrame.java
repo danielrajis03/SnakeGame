@@ -156,14 +156,15 @@ public class MyFrame extends JPanel implements KeyListener
 			this.setSpeed_XY(speed);
 			this.setLength(1);
 
-			/*
-			 * Attention : ?
-			 */
+
 			this.setNum(getW() / getSpeed_XY());
 			setNewImgSnakeHead(getImgSnakeHead());
 
 		}
 
+		/**
+		 * @return IMG_SNAKE_HEAD
+		 */
 		public static BufferedImage getImgSnakeHead() {
 			return IMG_SNAKE_HEAD;
 		}
