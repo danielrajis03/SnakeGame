@@ -10,13 +10,14 @@ import javax.imageio.ImageIO;
 
 
 /**
- *
+ *Images are put into buffers and stored where they can be called and/or
+ * manipulated
  */
 public class GameUtil
 {
 	/**
-	 * @param imagePath
-	 * @return
+	 * @param imagePath image path in directory
+	 * @return i
 	 */
 	public static Image getImage(String imagePath)
 	{
@@ -27,7 +28,7 @@ public class GameUtil
 			i = ImageIO.read(u);
 		} catch (Exception e)
 		{
-			System.err.println("VILLA : FINN EKKI TILTEKNA MYNDIN !\n");
+			System.err.println(" Error !\n");
 			e.printStackTrace();
 		}
 
@@ -35,10 +36,10 @@ public class GameUtil
 	}
 
 	/**
-	 * @param bufferedImage
-	 * @param degree
-	 * @return
-	 * @Description Rotates image certain amount of degrees.
+	 *
+	 * {@code @Description} Rotates image certain amount of degrees.
+	 * @return i
+	 *
 	 */
 	public static Image rotateImage(final BufferedImage bufferedImage,
 									 final int degree)

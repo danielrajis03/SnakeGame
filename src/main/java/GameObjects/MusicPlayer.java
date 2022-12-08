@@ -23,7 +23,7 @@ public class MusicPlayer extends Thread
 	}
 
 	/**
-	 * @Description Assigns whatever(music/file) stored in the Buffer to player
+	 * {@code @Description} Assigns whatever(music/file) stored in the Buffer to player
 	 * and then Player.play();
 	 *
 	 */
@@ -53,8 +53,9 @@ public class MusicPlayer extends Thread
 
 
 	/**
-	 * @param filename
-	 * @Description Gets Music by getting it from a source root
+	 * {@code @Description} Gets Music by getting it from a source root
+	 * @param filename Filename
+	 *
 	 */
 	public static void getMusicPlay(String filename)
 	{

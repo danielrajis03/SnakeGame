@@ -2,11 +2,11 @@ package GameObjects;
 
 /**
  * 
- * @Project Snake
- * @Description Responsible for calling the method responsible for the moving
+ * {@code @Project} Snake
+ * {@code @Description} Responsible for calling the method responsible for the moving
  * of the snake.
- * @Author Sigurður Sigurðardóttir and Daniel Rajis
- */ 
+ * {@code @Author} Sigurður Sigurðardóttir and Daniel Rajis
+ */
 
 public interface movable
 {

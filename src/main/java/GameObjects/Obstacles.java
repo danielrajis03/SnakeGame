@@ -6,8 +6,6 @@ import java.util.Random;
 public class Obstacles extends MyFrame.SnakeObject
 {
 
-    private static final long serialVersionUID = -3641221053272056036L;
-
 
     /**
      * The obstacles method will randomly spawn either bomb or wall images
@@ -28,8 +26,8 @@ public class Obstacles extends MyFrame.SnakeObject
 
 
     /**
-     * @param mySnake
-     * @Description Collides will kill the snake and end the game if the
+     * @param mySnake Body of snake
+     * {@code @Description} Collides will kill the snake and end the game if the
      * snake overlaps with the obstacle images.
      */
     public void collides(MyFrame.MySnake mySnake)	{
@@ -41,7 +39,7 @@ public class Obstacles extends MyFrame.SnakeObject
     }
 
     /**
-     * @param g
+     * @param g g
      */
     @Override
     public void draw(Graphics g)

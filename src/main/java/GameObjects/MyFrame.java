@@ -6,6 +6,7 @@ import java.awt.event.KeyListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
+import java.io.Serial;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,14 +17,14 @@ import static Controller.Scene02controller.speed;
 
 
 /**
- *
- * @Author Sigurður Sigurðardóttir and Daniel Rajis
-
- */ 
-
-
+ * Public class that Implements all the methods that regard the objects and
+ * how they interact with each other in the frame where the actual game is
+ * played along with the fetching and setting of coordinates on the frame of
+ * the game.
+ */
 public class MyFrame extends JPanel implements KeyListener
 {
+	@Serial
 	private static final long serialVersionUID = -3149926831770554380L;
 
 	public JFrame jFrame = new JFrame();
@@ -37,7 +38,7 @@ public class MyFrame extends JPanel implements KeyListener
 	}
 
 	/**
-	 * @Description Method Responsible for loading the frame in which the
+	 *  Method Responsible for loading the frame in which the
 	 * actual
 	 * snake game is played
 	 */
@@ -52,7 +53,7 @@ public class MyFrame extends JPanel implements KeyListener
 		jFrame.setTitle("D1's Snake Game");
 		jFrame.setSize(870, 560);
 		jFrame.setLocationRelativeTo(null);
-		jFrame.addWindowListener(new WindowAdapter()// loka
+		jFrame.addWindowListener(new WindowAdapter()
 		{
 			@Override
 			public void windowClosing(WindowEvent e)
@@ -139,10 +140,11 @@ public class MyFrame extends JPanel implements KeyListener
 		boolean up, down, left, right = true;
 
 		/**
-		 * @param x
-		 * @param y
 		 * Represents the body of the snake. Method used to initialise its
-		 * length and image.
+		 * 		  length and image.
+		 * @param x x coordinates
+		 * @param y y coordinates
+		 *
 		 */
 		public MySnake(int x, int y)
 		{
@@ -181,7 +183,8 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * @param newImgSnakeHead
+		 * updates picture of snake head
+		 * @param newImgSnakeHead newImgSnakeHead
 		 */
 		public static void setNewImgSnakeHead(BufferedImage newImgSnakeHead) {
 			MySnake.newImgSnakeHead = newImgSnakeHead;
@@ -193,8 +196,9 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * @param length
 		 * Changes size of variable "length"
+		 * @param length
+		 *
 		 */
 		public void changeLength(int length)
 		{
@@ -203,9 +207,7 @@ public class MyFrame extends JPanel implements KeyListener
 
 		public void keyPressed(KeyEvent e)
 		{
-			/**
-			 * @Author athugaðu lykilinn and Daniel Rajis
- 			 */
+
 
 			switch (e.getKeyCode())
 			{
@@ -268,9 +270,7 @@ public class MyFrame extends JPanel implements KeyListener
 		 */
 		public void move()
 		{
-			/**
-			 * @Author láta kvikindið hreyfa sig and Daniel Rajis
-			 */
+
 
 			if (up)
 			{
@@ -332,8 +332,8 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * @param g
-		 * @Description Make sure that the size of the snake is increasing
+		 * @param g Graphics g
+		 * Make sure that the size of the snake is increasing
 		 * with each fruit it eats.
 		 */
 		public void drawBody(Graphics g)
@@ -350,7 +350,7 @@ public class MyFrame extends JPanel implements KeyListener
 		/**
 		 * Makes sure that the dimension of the game screen is correct so
 		 * that the snake can move around the whole screen.If snake goes
-		 * outofBounds it will die.
+		 * out of Bounds it will die.
 		 *
 		 */
 		private void outOfBounds()
@@ -372,7 +372,7 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * @param speed_XY
+		 * @param speed_XY Speed of snake
 		 */
 		public void setSpeed_XY(int speed_XY) {
 			this.speed_XY = speed_XY;
@@ -390,7 +390,7 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * @param num
+		 * @param num integer
 		 */
 		public void setNum(int num) {
 			this.num = num;
@@ -404,8 +404,8 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * @param score
-		 * @Description Assigns Variable score
+		 * @param score User Score
+		 *  Assigns Variable score
 		 */
 		public void setScore(int score) {
 			this.score = score;
@@ -428,7 +428,7 @@ public class MyFrame extends JPanel implements KeyListener
 
 		/**
 		 * @return coordinates of the rectangle
-		 * @Description Gets the with and height of rectangle
+		 *  Gets the with and height of rectangle
 		 */
 		public Rectangle getRectangle()
 		{
@@ -443,7 +443,7 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * @param x
+		 * @param x x coordinates
 		 */
 		public void setX(int x) {
 			this.x = x;
@@ -457,7 +457,7 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * @param y
+		 * @param y y coordinates
 		 */
 		public void setY(int y) {
 			this.y = y;
@@ -471,7 +471,7 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * @param i
+		 * @param i i coordinates
 		 */
 		public void setI(Image i) {
 			this.i = i;
@@ -485,7 +485,7 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * @param w
+		 * @param w w coordinates
 		 */
 		public void setW(int w) {
 			this.w = w;
@@ -499,7 +499,7 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * @param h
+		 * @param h h coordinates
 		 */
 		public void setH(int h) {
 			this.h = h;
@@ -513,7 +513,7 @@ public class MyFrame extends JPanel implements KeyListener
 		}
 
 		/**
-		 * @param l
+		 * @param l l coordinates
 		 */
 		public void setL(boolean l) {
 			this.l = l;

@@ -11,7 +11,10 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
 /**
- * @Author Daniel Rajis
+ * {@code @Description} Public class will have the actions for all of scene
+ * 02 fxml and it is linked via the fx:id.
+ * {@code @Author} Daniel Rajis
+ *
  */
 public class Scene02controller   {
     public static int SetbackGround;
@@ -25,7 +28,7 @@ public class Scene02controller   {
     private TextArea txaWelcome;
 
     /**
-     * @Description Responsible for setting the background of the actual Snake
+     * {@code @Description} Responsible for setting the background of the actual Snake
      * Gameplay
      */
     public static int getSetbackGround() {
@@ -37,7 +40,7 @@ public class Scene02controller   {
     }
 
     /**
-     * @Description Variable used to represent the Speed of the Snake
+     * {@code @Description} Variable used to represent the Speed of the Snake
      */
     public static int getSpeed() {
         return speed;
@@ -49,10 +52,11 @@ public class Scene02controller   {
 
 
     /**
+     * {@code @Description} Responsible for linking the "start game" button to the
+     *       play class and starting the Game for the player.
      * @param event User clicks Start game button
-     * @throws IOException
-     * @Description Responsible for linking the "start game" button to the
-     * play class and starting the Game for the player.
+     * @throws IOException throws IO exception
+     *
      */
     @FXML
     void startGame(ActionEvent event)throws IOException {
@@ -67,8 +71,9 @@ public class Scene02controller   {
     }
 
     /**
+     *  {@code @Description} Method responsible for setting the game background one.
      * @param event User clicks Background 1
-     * @Description Method responsible for setting the game background one.
+     *
      */
     @FXML
     void BG1(ActionEvent event) {
@@ -77,17 +82,19 @@ public class Scene02controller   {
     }
 
     /**
+     * {@code @Description} Method responsible for setting the game background Two.
      * @param event User clicks Background 2 button.
-     * @Description Method responsible for setting the game background Two.
+     *
      */
     @FXML
     void BG2(ActionEvent event){
         setSetbackGround(2);}
 
     /**
+     * @code @Description} Method responsible for setting the speed fo the snake for
+     *       the easy level.
      * @param event User clicks Easy difficulty button
-     * @Description Method responsible for setting the speed fo the snake for
-     * the easy level.
+     *
      */
     @FXML
     void Easy(ActionEvent event) {
@@ -95,9 +102,10 @@ public class Scene02controller   {
     }
 
     /**
+     * {@code @Description} Method responsible for setting speed of the snake for
+     *       the Hard level
      * @param event User clicks the hard difficulty button.
-     * @Description Method responsible for setting speed of the snake for
-     * the Hard level
+     *
      */
     @FXML
     void Hard(ActionEvent event) {
@@ -106,7 +114,7 @@ public class Scene02controller   {
 
 
     /**
-     * @Description Method responsible for Displaying the welcome medssage on
+     * {@code @Description} Method responsible for Displaying the welcome message on
      * screen two using the user input from "Data.getText()"
      */
     @FXML
@@ -115,7 +123,7 @@ public class Scene02controller   {
     }
 
     /**
-     * @Description Initialising Second screen where user selects level
+     * {@code @Description} Initialising Second screen where user selects level
      * difficulty and background of their round.
      */
     public AnchorPane getScene02() {
@@ -127,7 +135,7 @@ public class Scene02controller   {
     }
 
     /**
-     * @Description Text displayed on scene two that outputs user input from
+     * {@code @Description} Text displayed on scene two that outputs user input from
      * "Data.getText()"
      */
     public TextArea getTxaWelcome() {

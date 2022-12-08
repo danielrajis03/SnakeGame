@@ -10,8 +10,6 @@ import java.util.Random;
 public class Food extends MyFrame.SnakeObject
 {
 
-	private static final long serialVersionUID = -3641221053272056036L;
-
 
 	/**
 	 * Method responsible for the random spawning of the fruit and making
@@ -30,10 +28,11 @@ public class Food extends MyFrame.SnakeObject
 	}
 
 	/**
-	 * @param mySnake
-	 * @Description Method responsible for what happens after a fruit is "eaten"
-	 * by the
-	 * snake.
+	 * {@code @Description} Method responsible for what happens after a fruit is "eaten"
+	 * 	  by the
+	 * 	  snake.
+	 * @param mySnake body of the snake
+	 *
 	 */
 	public void eaten(MyFrame.MySnake mySnake)	{
 
@@ -46,11 +45,12 @@ public class Food extends MyFrame.SnakeObject
 	}
 
 	/**
-	 * @param g
-	 * @Description Responsible for the drawing of images.
-	 * Draws as much of the specified image as is currently available.
-	 * The image is drawn with its top-left corner at (x, y).In this
-	 * graphics context's coordinate space.
+	 * {@code @Description} Responsible for the drawing of images.
+	 * 	 * Draws as much of the specified image as is currently available.
+	 * 	 * The image is drawn with its top-left corner at (x, y).In this
+	 * 	 * graphics context's coordinate space.
+	 * @param g Graphics g
+	 *
 	 */
 	@Override
 	public void draw(Graphics g)

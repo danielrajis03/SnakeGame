@@ -5,13 +5,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Description Class responsible for the storing of images that can be fetched
+ *  Class responsible for the storing of images that can be fetched
  * and used within the game.
  */
 public class ImageUtil
 {
 	/**
-	 * @Description Variable that is placeholder of images that can be
+	 *  Variable that is placeholder of images that can be
 	 * fetched with "getImages"
 	 */
 	private static Map<String, Image> images = new HashMap<>();
@@ -49,11 +49,11 @@ public class ImageUtil
 
 	}
 
+	/**
+	 * @return images
+	 */
 	public static Map<String, Image> getImages() {
 		return images;
 	}
 
-	public static void setImages(Map<String, Image> images) {
-		ImageUtil.images = images;
-	}
 }

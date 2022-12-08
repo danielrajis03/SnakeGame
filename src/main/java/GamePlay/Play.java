@@ -15,14 +15,15 @@ import static Controller.Scene02controller.SetbackGround;
 
 /**
  * 
- * @Project Snake
- * @Description A Snake Game implemented using Java FX.
- * @Author Daniel Rajis
- */ 
+ * {@code @Project} Snake
+ * {@code @Description} A Snake Game implemented using Java FX.
+ * {@code @Author} Daniel Rajis
+ */
 
 public class Play extends MyFrame
 {
 
+	@Serial
 	private static final long serialVersionUID = -3641221053272056036L;
 
 	public static MySnake mySnake = new MySnake(100, 100);// x , y
@@ -67,10 +68,11 @@ public class Play extends MyFrame
 	}
 
 	/**
+	 * @code @Description} Paint is the method that implements the setting of
+	 * 	  background choice, the spawning of food,obstacles and poison and the
+	 * 	  fetching and printing of the highscore.
 	 * @param g the <code>Graphics</code> context in which to paint
-	 * @Description Paint is the method that implements the setting of
-	 * background choice, the spawning of food,obstacles and poison and the
-	 * fetching and printing of the highscore.
+	 *
 	 */
 	@Override
 	public void paint(Graphics g)
@@ -88,10 +90,9 @@ public class Play extends MyFrame
 		if (playerName == null){
 			playerName = Data.getText();
 		}
-		//playerName = name.getText;
+
 		g.drawImage(background, 0, 0, null);
 
-		// Ákveða stöðu leiksins.
 		if (mySnake.isL())
 		{
 			mySnake.draw(g);
@@ -126,10 +127,11 @@ public class Play extends MyFrame
 	}
 
 	/**
-	 * @param g
-	 * @Description The method for drawing the Name of the user along with
-	 * their
-	 * current and highscore
+	 * {@code @Description} The method for drawing the Name of the user along with
+	 * 	  their
+	 * 	  current and highscore
+	 * @param g G
+	 *
 	 */
 	public void drawScore(Graphics g)
 	{
@@ -192,8 +194,8 @@ public class Play extends MyFrame
 	}
 
 	/**
-	 * @return
-	 * @Description Method responsible for fetching the highscore from the
+	 * {@code @Description} Method responsible for fetching the
+	 * highscore from the
 	 * highscore.dat file
 	 */
 	public String GetHighScore()

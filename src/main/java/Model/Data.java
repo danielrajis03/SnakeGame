@@ -1,6 +1,8 @@
 package Model;
 /**
  * @author Daniel Rajis
+ * {@code @Description} Public class that is responsible for the passing of the user
+ * input.
  */
 
 

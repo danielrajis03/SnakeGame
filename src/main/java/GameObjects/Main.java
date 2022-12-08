@@ -10,19 +10,13 @@ import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application  {
-    public static String getPlayerName() {
-        return playerName;
-    }
-
-    public static void setPlayerName(String playerName) {
-        Main.playerName = playerName;
-    }
 
     /**
-     * @param stage
-     * @throws IOException
-     * @Description Method responsible for the booting up of the first scene
-     * by loading it using fxml and setting up the screen and Title
+     * {@code @Description} Method responsible for the booting up of the first scene
+     *       by loading it using fxml and setting up the screen and Title
+     * @param stage First Screen
+     * @throws IOException In case of error
+     *
      */
     @Override
     public void start(Stage stage) throws IOException {
@@ -36,7 +30,6 @@ public class Main extends Application  {
     public static String playerName;
 
     /**
-     * @param args
      * Responsible for the running of the program.
      */
     public static void main(String[] args) {
