@@ -15,7 +15,7 @@ Installation and Usage:
 
 Install the latest version of IntelliJ.
 Along with the Version 18 SDK. You need to have a JDK installed on the system. 
-Open the file in IntelliJ and run the program from main. 
+Open the zip file in IntelliJ and run the program from main. 
 Once you are at the start screen, please enter your name and press next to proceed to the level and difficulty selection. 
 Please select a background of your choice AND a difficulty level before trying to start the game.
 
